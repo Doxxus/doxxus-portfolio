@@ -27,6 +27,18 @@ main {
     scrollbar-width: none;
 }
 
+.space_background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: content-box;
+    background-image: url('img/space.png');
+    background-size: cover;
+    position: fixed;
+}
+
 #title {
     opacity: 0;
     top: 50%;
@@ -150,8 +162,8 @@ line {
 }
 
 .info_base {
-    @apply border-violet-900 bg-translucent-violet;
-    @apply dark:border-violet-400 bg-muddy-violet;
+    @apply border-violet-900 bg-translucent-violet/50;
+    @apply dark:border-violet-400 dark:bg-muddy-violet/50;
 
     display: flexbox;
     margin-left: 5%;
@@ -159,9 +171,10 @@ line {
     margin-top: 5px;
     margin-bottom: 5px;
     border-radius: 1rem;
-    border-width: 3px;
-    box-shadow: 3px 3px #202022;
+    border-width: 1px;
+    /* box-shadow: 3px 3px #202022; */
     height: 40px;
+    backdrop-filter: blur(5px);
     z-index: 2;
 }
 

@@ -70,47 +70,47 @@
     //#endregion
 </script>
 
-<html lang="svelte" class="bg-zinc-200 dark:bg-zinc-800">
-    <main class="bg-zinc-200 dark:bg-zinc-800">
-        <div id="title" bind:this={Intro.eleTitle}>
-            <div class="rectangle-60" use:springInFromRight={{translateX: 0, translateY: 0}}>
-                <h1 class="text-zinc-800 dark:text-zinc-200">Doxxus</h1>
+<main class="bg-zinc-200 dark:bg-zinc-800"> 
+    <div class="space_background"></div>
+
+    <div id="title" bind:this={Intro.eleTitle}>
+        <div class="rectangle-60" use:springInFromRight={{translateX: 0, translateY: 0}}>
+            <h1 class="text-zinc-800 dark:text-zinc-200">Doxxus</h1>
+        </div>
+        <div class="rectangle-60" use:springInFromLeft={{translateX: 0, translateY: 0}}>
+            <h2 class="text-violet-900 dark:text-violet-400">Computer Scientist</h2>
+        </div>
+    </div>
+
+    <svg id="linedown" bind:this={Intro.lineDownSvg}>
+        <line bind:this={Intro.lineDown} class="stroke-violet-900 dark:stroke-violet-400" x1=0 y1=0 x2=0 y2=63></line>
+    </svg>
+    <svg id="rect">
+        <line id="lineleft" bind:this={Intro.leftLine} class="stroke-violet-900 dark:stroke-violet-400" x1=-600 y1=0 x2=0 y2=0></line>
+        <line id="lineright" bind:this={Intro.rightLine} class="stroke-violet-900 dark:stroke-violet-400" x1=0 y1=0 x2=600 y2=0></line>
+    </svg>
+
+    <div id="main_content" bind:this={Intro.eleMainContent}>
+        <div id="about" class="fade_in" bind:this={Intro.eleAbout}>
+            <p class="text-zinc-800 dark:text-zinc-200 tight">I'm a <my_age>{age}</my_age> year old programmer with a wide array of experience in many languages, frameworks, and platforms.</p>
+            <p class="text-zinc-800 dark:text-zinc-200 tight">I'm currently interested in learning the SvelteKit framework and associated TypeScript web stack.</p>
+        </div>
+        <div class="center">
+            <div id="Experience" class="info_base fade_in" bind:this={Intro.eleExperience}>
+                <span class="sub_heading">Experience</span>
             </div>
-            <div class="rectangle-60" use:springInFromLeft={{translateX: 0, translateY: 0}}>
-                <h2 class="text-violet-900 dark:text-violet-400">Computer Scientist</h2>
+            <div id="Languages" class="info_base fade_in" bind:this={Intro.eleLanguages}>
+                <span class="sub_heading">Languages</span>
+            </div>
+            <div id="Projects" class="info_base fade_in" bind:this={Intro.eleProjects}>
+                <span class="sub_heading">Projects</span>
+            </div>
+            <div id="Education" class="info_base fade_in" bind:this={Intro.eleEducation}>
+                <span class="sub_heading">Education</span>
+            </div>
+            <div id="Contact" class="info_base fade_in" bind:this={Intro.eleContact}>
+                <span class="sub_heading">Contact</span>
             </div>
         </div>
-
-        <svg id="linedown" bind:this={Intro.lineDownSvg}>
-            <line bind:this={Intro.lineDown} class="stroke-violet-900 dark:stroke-violet-400" x1=0 y1=0 x2=0 y2=63></line>
-        </svg>
-        <svg id="rect">
-            <line id="lineleft" bind:this={Intro.leftLine} class="stroke-violet-900 dark:stroke-violet-400" x1=-600 y1=0 x2=0 y2=0></line>
-            <line id="lineright" bind:this={Intro.rightLine} class="stroke-violet-900 dark:stroke-violet-400" x1=0 y1=0 x2=600 y2=0></line>
-        </svg>
-
-        <div id="main_content" bind:this={Intro.eleMainContent}>
-            <div id="about" class="fade_in" bind:this={Intro.eleAbout}>
-                <p class="text-zinc-800 dark:text-zinc-200 tight">I'm a <my_age>{age}</my_age> year old programmer with a wide array of experience in many languages, frameworks, and platforms.</p>
-                <p class="text-zinc-800 dark:text-zinc-200 tight">I'm currently interested in learning the SvelteKit framework and associated TypeScript web stack.</p>
-            </div>
-            <div class="center">
-                <div id="Experience" class="info_base fade_in" bind:this={Intro.eleExperience}>
-                    <span class="sub_heading">Experience</span>
-                </div>
-                <div id="Languages" class="info_base fade_in" bind:this={Intro.eleLanguages}>
-                    <span class="sub_heading">Languages</span>
-                </div>
-                <div id="Projects" class="info_base fade_in" bind:this={Intro.eleProjects}>
-                    <span class="sub_heading">Projects</span>
-                </div>
-                <div id="Education" class="info_base fade_in" bind:this={Intro.eleEducation}>
-                    <span class="sub_heading">Education</span>
-                </div>
-                <div id="Contact" class="info_base fade_in" bind:this={Intro.eleContact}>
-                    <span class="sub_heading">Contact</span>
-                </div>
-            </div>
-        </div>
-    </main>
-</html>
+    </div>
+</main>
