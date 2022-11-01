@@ -137,22 +137,23 @@ line {
     overflow: visible;
     left: 50%;
     top: 160px;
+    width: 100vw;
 }
 
 #lineleft, #lineright {
     stroke-width: 2px;
-    stroke-dasharray: 600px;
+    stroke-dasharray: 40vw;
     stroke-linecap: round;
     fill: transparent;
     opacity: 0;
 }
 
 #lineleft {
-    stroke-dashoffset: -600px;
+    stroke-dashoffset: -40vw;
 }
 
 #lineright {
-    stroke-dashoffset: 600px;
+    stroke-dashoffset: 40vw;
 }
 
 .rectangle-60 {
@@ -176,6 +177,7 @@ line {
     height: 40px;
     backdrop-filter: blur(5px);
     z-index: 2;
+    overflow: hidden;
 }
 
 .rectangle-500 {
@@ -190,7 +192,8 @@ line {
 }
 
 .expand {
-    height: fit-content;
+    height: 500px;
+    border-width: 2px;
 }
 
 .drop_div {
@@ -213,9 +216,11 @@ line {
     overflow: visible;
     margin-bottom: 100px;
     margin-top: 10px;
+    text-align: center;
 }
 
 .tight {
+    text-align: center;
     line-height: 1.2em;
     font-size: 1.1em;
     padding: 0%;
