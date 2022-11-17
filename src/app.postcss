@@ -11,6 +11,11 @@
     display: none;
 }
 
+:root {
+    --doc-height: 100%;
+    --doc-width: 100%;
+}
+
 @media (min-width: 640px) {
     main {
         max-width: 1920px;
@@ -20,11 +25,16 @@
     }
 }
 
-main {
+main, body {
+    overflow-x: hidden;
     text-align: center;
     padding: 1em;
     margin: 0;
     scrollbar-width: none;
+    height: 100vh;
+    height: var(--doc-height);
+    width: 100vw;
+    width: var(--doc-width);
 }
 
 .space_background {
