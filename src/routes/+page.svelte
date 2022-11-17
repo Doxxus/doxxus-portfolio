@@ -6,6 +6,7 @@
     import { Intro } from '../TypeScripts/intro';
     import { Elements } from '../TypeScripts/elements';
     import * as helpers from '../TypeScripts/helpers';
+    import * as languages from '../TypeScripts/languages';
 
     onMount(Intro.AnimateIntro);
 
@@ -99,19 +100,23 @@
         </div>
         <div class="center">
             <div id="Experience" class="info_base fade_in" bind:this={Elements.eleExperience} on:click={helpers.expandDivMouseHandler} on:keydown={helpers.expandDivKeyboardHandler}>
-                <span class="sub_heading" on:click={helpers.expandDivMouseHandler} on:keydown={helpers.expandDivKeyboardHandler}>Experience</span>
+                <span class="sub_heading">Experience</span>
             </div>
-            <div id="Languages" class="info_base fade_in" bind:this={Elements.eleLanguages} on:click={helpers.expandDivMouseHandler} on:keydown={helpers.expandDivKeyboardHandler}>
-                <span class="sub_heading" on:click={helpers.expandDivMouseHandler} on:keydown={helpers.expandDivKeyboardHandler}>Languages</span>
+            <div id="Languages" class="info_base fade_in" bind:this={Elements.eleLanguages} on:click={helpers.expandDivMouseHandler} on:mouseenter={languages.deployLanguages} on:keydown={helpers.expandDivKeyboardHandler}>
+                <span class="sub_heading">Skills</span>
+                <div id="LanguagesInner" class="inner_base" bind:this={Elements.eleLanguagesInner}>
+                    <span id="lang_tooltip">Click on a language bar to expand it.</span>
+                    <div id="lang_proficiencies" bind:this={Elements.langProfs}></div>
+                </div>
             </div>
             <div id="Projects" class="info_base fade_in" bind:this={Elements.eleProjects} on:click={helpers.expandDivMouseHandler} on:keydown={helpers.expandDivKeyboardHandler}>
-                <span class="sub_heading" on:click={helpers.expandDivMouseHandler} on:keydown={helpers.expandDivKeyboardHandler}>Projects</span>
+                <span class="sub_heading">Projects</span>
             </div>
             <div id="Education" class="info_base fade_in" bind:this={Elements.eleEducation} on:click={helpers.expandDivMouseHandler} on:keydown={helpers.expandDivKeyboardHandler}>
-                <span class="sub_heading" on:click={helpers.expandDivMouseHandler} on:keydown={helpers.expandDivKeyboardHandler}>Education</span>
+                <span class="sub_heading">Education</span>
             </div>
             <div id="Contact" class="info_base fade_in" bind:this={Elements.eleContact} on:click={helpers.expandDivMouseHandler} on:keydown={helpers.expandDivKeyboardHandler}>
-                <span class="sub_heading" on:click={helpers.expandDivMouseHandler} on:keydown={helpers.expandDivKeyboardHandler}>Contact</span>
+                <span class="sub_heading">Contact</span>
             </div>
         </div>
     </div>

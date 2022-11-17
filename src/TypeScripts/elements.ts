@@ -4,7 +4,11 @@ export namespace Elements {
 
     export let eleAbout: HTMLElement;
     export let eleExperience: HTMLElement;
+
     export let eleLanguages: HTMLElement;
+    export let eleLanguagesInner: HTMLDivElement;
+    export let langProfs: HTMLDivElement;
+
     export let eleProjects: HTMLElement;
     export let eleEducation: HTMLElement;
     export let eleContact: HTMLElement;
