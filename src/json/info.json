@@ -2,48 +2,70 @@
     "languages": [
         {
             "name": "C#",
-            "proficiency": 100
+            "proficiency": 100,
+            "about": "C# is probably the language I'm most proficient with currently, I use it for my current job pretty much every day. It's a great language to write robust, scaleable, and maintainable codebases so it's my go-to for anything that needs to be done well.",
+            "frameworks": []
         },
         {
             "name": "Javascript",
-            "proficiency": 65
+            "proficiency": 65,
+            "about": "I started programming in Javascript back in my highschool days, using primarily vanilla JS/JQuery, PHP, and HTML/CSS, no frameworks just good ol' JS. I'd say I'm fairly comfortable with this stack.",
+            "frameworks": []
         },
         {
             "name": "TypeScript",
-            "proficiency": 75
+            "proficiency": 75,
+            "about": "I've recently been brought into the 21st century with Typescript. It's a fantastic way to make Javascript scaleable and it's a pleasure to use. Over the past couple of months I've gotten quite good at using it.",
+            "frameworks": []
         },
 
         {
             "name": "Python",
-            "proficiency": 73
+            "proficiency": 73,
+            "about": "Python is my go-to language whenever I want to script something out quickly with not much planning / boilerplate overhead. That and machine learning, who could have guessed. I'm an decently proficient with Python and it's various essential API's.",
+            "frameworks": []
         },
         {
             "name": "R",
-            "proficiency": 45
+            "proficiency": 45,
+            "about": "I began using R for my current job and then fell in love with R shiny. I don't get to use it much any more but it's a fun language none the less, I'd say I'm still a novice with it however.",
+            "frameworks": []
         },
         {
             "name": "Java",
-            "proficiency": 70
+            "proficiency": 70,
+            "about" : "I'd much prefer to use C# if I'm going to be using a strongly-typed, garbage-collected language as I think it does a lot of what Java can do but better. However, I still have to write some good ol' Java every once in a while and I'd say I'm reasonably decent with it.",
+            "frameworks" : []
         },
         {
             "name": "C++",
-            "proficiency": 90
+            "proficiency": 90,
+            "about": "Probably one of the most powerfull languages I've used, especially if you do any OpenGL programming (which I have in the past). I haven't used it too much recently but I know if I ever need to again, I'll be proficient in it.",
+            "frameworks": []
         },
         {
             "name": "C",
-            "proficiency": 75
+            "proficiency": 75,
+            "about": "C was the first real programming language I learned, and I've had to use it a fair amount for my current position programming embeded software. It will always have a soft spot in my heart.",
+            "frameworks": []
         },
         {
             "name": "SQL",
-            "proficiency": 55
+            "proficiency": 55,
+            "about": "Structured Query Language: It's alright. I'm an intermediate developer with SQL, I can write stored procedures and do some joining, what's not to love?",
+            "frameworks": []
         },      
         {
             "name": "PHP",
-            "proficiency": 40
+            "proficiency": 40,
+            "about": "PHP Hypertext Preprocessor. No one should be using this language in 2022, but I certainly have in the past. I used it for a couple of projects back in my highschool days before nice reactive javascript frameworks were a thing, but haven't touched it since. I'd say I'm a novice with it.",
+            "frameworks": []
         },
         {
             "name": "HTML/CSS",
-            "proficiency": 70
+            "proficiency": 70,
+            "about": "80% of my time developing web apps is spent playing around with the CSS, moreso now that I've picked up tailwind, which streamlines the whole process and makes things much nicer to do. Love me some good styles and good formatting.",
+            "frameworks": []
         }
     ]
 }

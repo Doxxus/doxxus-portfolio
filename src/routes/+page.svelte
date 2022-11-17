@@ -105,7 +105,7 @@
             <div id="Languages" class="info_base fade_in" bind:this={Elements.eleLanguages} on:click={helpers.expandDivMouseHandler} on:mouseenter={languages.deployLanguages} on:keydown={helpers.expandDivKeyboardHandler}>
                 <span class="sub_heading">Skills</span>
                 <div id="LanguagesInner" class="inner_base" bind:this={Elements.eleLanguagesInner}>
-                    <span id="lang_tooltip">Click on a language bar to expand it.</span>
+                    <span id="lang_tooltip">Click on a language bar for more info.</span>
                     <div id="lang_proficiencies" bind:this={Elements.langProfs}></div>
                 </div>
             </div>
