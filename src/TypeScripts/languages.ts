@@ -1,6 +1,5 @@
 import { Elements } from './elements';
 import * as info from '../json/info.json';
-import { LANG } from '$env/static/private';
 
 interface framework {
 
