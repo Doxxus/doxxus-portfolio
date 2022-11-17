@@ -89,8 +89,8 @@
         <line bind:this={Elements.lineDown} class="stroke-violet-900 dark:stroke-violet-400" x1=0 y1=0 x2=0 y2=63></line>
     </svg>
     <svg id="rect">
-        <line id="lineleft" bind:this={Elements.leftLine} class="stroke-violet-900 dark:stroke-violet-400" x1=-40vw y1=0 x2=0 y2=0></line>
-        <line id="lineright" bind:this={Elements.rightLine} class="stroke-violet-900 dark:stroke-violet-400" x1=0 y1=0 x2=40vw y2=0></line>
+        <line id="lineleft" bind:this={Elements.leftLine} class="stroke-violet-900 dark:stroke-violet-400" x1=10vw y1=0 x2=50vw y2=0></line>
+        <line id="lineright" bind:this={Elements.rightLine} class="stroke-violet-900 dark:stroke-violet-400" x1=50vw y1=0 x2=90vw y2=0></line>
     </svg>
 
     <div id="main_content" bind:this={Elements.eleMainContent}>
