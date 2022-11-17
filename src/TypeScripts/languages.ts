@@ -22,6 +22,7 @@ function generateLanguage(lang: language) {
     
     let langName: HTMLSpanElement = document.createElement("span");
     langName.textContent = lang.name;
+    langName.id = lang.name + '_title';
     langName.classList.add('lang_base');
 
     let langProf: HTMLDivElement = document.createElement("div");
