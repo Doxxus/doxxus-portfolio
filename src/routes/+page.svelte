@@ -5,8 +5,9 @@
 
     import { Intro } from '../TypeScripts/intro';
     import { Elements } from '../TypeScripts/elements';
-    import * as helpers from '../TypeScripts/helpers';
-    import * as languages from '../TypeScripts/languages';
+    import Skillset from './skillset.svelte';
+
+    import * as info from '../json/info.json';
 
     onMount(Intro.AnimateIntro);
 
@@ -17,6 +18,18 @@
 
         age = ((Number(today) - Number(birthday)) / (1000 * 60 * 60 * 24 * 365.25)).toFixed(9);
     }, 50);
+
+    let show_experience: boolean = false;
+    let show_skillset: boolean = false;
+    let show_projects: boolean = false;
+    let show_education: boolean = false;
+    let show_contact: boolean = false;
+
+    let init_skillset: boolean = false;
+
+    function ToggleExpand(show: boolean): boolean {
+        return !show;
+    }
 
     //#region Spring-in Actions
     type SpringInActionTranslate = Action<HTMLElement, SpringInParamsTranslate>;
@@ -99,25 +112,29 @@
             <p class="text-zinc-800 dark:text-zinc-200 tight">I'm currently interested in learning the SvelteKit framework and associated TypeScript web stack.</p>
         </div>
         <div class="center">
-            <div id="Experience" class="info_base fade_in" bind:this={Elements.eleExperience} on:click={helpers.expandDivMouseHandler} on:keydown={helpers.expandDivKeyboardHandler}>
+            <div id="Experience" class="info_base fade_in" class:expand={show_experience} bind:this={Elements.eleExperience} on:click={() => {show_experience = ToggleExpand(show_experience)}} on:keydown={() => {show_experience = ToggleExpand(show_experience)}}>
                 <span class="sub_heading">Experience</span>
             </div>
-            <div id="Languages" class="info_base fade_in" bind:this={Elements.eleLanguages} on:click={helpers.expandDivMouseHandler} on:mouseenter={languages.deployLanguages} on:keydown={helpers.expandDivKeyboardHandler}>
+            <div id="Languages" class="info_base fade_in" class:expand={show_skillset} bind:this={Elements.eleLanguages} on:mouseenter={() => {init_skillset = true}} on:mouseleave={() => {init_skillset = false}} on:click={() => {show_skillset = ToggleExpand(show_skillset)}} on:keydown={() => {show_skillset = ToggleExpand(show_skillset)}}>
                 <span class="sub_heading">Skills</span>
-                <div id="LanguagesInner" class="inner_base" bind:this={Elements.eleLanguagesInner}>
-                    <span id="lang_tooltip">Click on a language bar for more info.</span>
-                    <div id="lang_proficiencies" bind:this={Elements.langProfs}></div>
-                </div>
+                <Skillset languages='{info.languages}' show_skillset='{show_skillset}' init_skillset='{init_skillset}'></Skillset>
             </div>
-            <div id="Projects" class="info_base fade_in" bind:this={Elements.eleProjects} on:click={helpers.expandDivMouseHandler} on:keydown={helpers.expandDivKeyboardHandler}>
+            <div id="Projects" class="info_base fade_in" class:expand={show_projects} bind:this={Elements.eleProjects} on:click={() => {show_projects = ToggleExpand(show_projects)}} on:keydown={() => {show_projects = ToggleExpand(show_projects)}}>
                 <span class="sub_heading">Projects</span>
             </div>
-            <div id="Education" class="info_base fade_in" bind:this={Elements.eleEducation} on:click={helpers.expandDivMouseHandler} on:keydown={helpers.expandDivKeyboardHandler}>
+            <div id="Education" class="info_base fade_in" class:expand={show_education} bind:this={Elements.eleEducation} on:click={() => {show_education = ToggleExpand(show_education)}} on:keydown={() => {show_education = ToggleExpand(show_education)}}>
                 <span class="sub_heading">Education</span>
             </div>
-            <div id="Contact" class="info_base fade_in" bind:this={Elements.eleContact} on:click={helpers.expandDivMouseHandler} on:keydown={helpers.expandDivKeyboardHandler}>
+            <div id="Contact" class="info_base fade_in" class:expand={show_contact} bind:this={Elements.eleContact} on:click={() => {show_contact = ToggleExpand(show_contact)}} on:keydown={() => {show_contact = ToggleExpand(show_contact)}}>
                 <span class="sub_heading">Contact</span>
             </div>
         </div>
     </div>
 </main>
+
+<style lang="scss">
+    .expand {
+        height: 500px;
+        border-width: 2px;
+    }
+</style>
