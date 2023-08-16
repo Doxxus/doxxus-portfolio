@@ -50,6 +50,10 @@
     export const close_timeline: Function = () => {
         expand_line = false;
         
+        setTimeout(() => {
+            show_dot = false;
+        }, show_dots.length * 500);
+
         for (let i = show_dots.length - 1; i >= 0; i--) {
             setTimeout(() => {
                 show_dots[i] = false;
@@ -62,7 +66,7 @@
 <main style="padding: 0px 0px 10px 0px">
     <div class="outer_container">
         
-        <div class="dot_marker" style="--top_dot: 5px">
+        <div class="dot_marker" style="--top_dot: 10px">
             <span class="dot_marker_center" class:dot_marker_animate={show_dot} style="animation-delay:200ms"></span>
             <span class="dot_marker_inner" class:dot_marker_animate={show_dot} style="animation-delay:100ms"></span>
             <span class="dot_marker_outer" class:dot_marker_animate={show_dot} style="animation-delay:0ms"></span>
@@ -230,14 +234,6 @@
         animation-timing-function: ease-in-out;
     }
 
-    .dot_marker_animate_reverse {
-        opacity: 1;
-        animation-name: pop_reverse;
-        animation-duration: 0.3s;
-        animation-iteration-count: 1;
-        animation-timing-function: ease-in-out;
-    }
-
     @keyframes pop {
         0% {
             transform: scale(0);
@@ -249,20 +245,6 @@
 
         100% {
             transform: scale(1);
-        }
-    }
-
-    @keyframes pop_reverse {
-        0% {
-            transform: scale(1);
-        }
-
-        50% {
-            transform: scale(2);
-        }
-
-        100% {
-            transform: scale(0);
         }
     }
 </style>
