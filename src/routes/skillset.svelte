@@ -66,8 +66,8 @@
 <style lang="scss">
     .lang_info_container {
         display: grid;
-        grid-template-columns: [col1] 45% [col2] 10% [col3] 45% [col4] auto;
-        grid-template-rows: [row0] 30px [row1] 120px [row2] 220px [row3] auto;
+        grid-template-columns: [col1] 45% [col2] 1fr [col3] 45% [col4] auto;
+        grid-template-rows: [row0] 30px [row1] 120px [row2] 1fr [row3] auto;
         place-items: center;
         transition: opacity 0.2s ease;
         transition-delay: 0s;

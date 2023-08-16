@@ -1,4 +1,166 @@
 {
+    "experiences": [
+        {
+            "id": 0,
+            "start_date": "Aug 2021",
+            "end_date": "",
+            "company": "Abbott Point of Care",
+            "position": "Associate Scientist",
+            "current": true,
+            "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tristique risus at urna malesuada, in semper arcu rutrum. Ut nisl urna, viverra non iaculis bibendum, auctor nec urna. Praesent faucibus ullamcorper lorem a pulvinar. Proin sed neque pharetra, dignissim ipsum non, facilisis ipsum. Cras sit amet nulla placerat, aliquam lorem ac, tristique nibh. ",
+            "duties": [
+                {
+                    "title": "Desktop Software",
+                    "time_slice": 60
+                },
+                {
+                    "title": "Documentation",
+                    "time_slice": 10
+                },
+                {
+                    "title": "Embedded Software",
+                    "time_slice": 10
+                },
+                {
+                    "title": "Engineering Troubleshooting",
+                    "time_slice": 15
+                },
+                {
+                    "title": "Misc",
+                    "time_slice": 5
+                }
+            ],
+            "technologies": [
+                {
+                    "lang": "C# .NET Framework (Win Forms)",
+                    "percent": 30
+                },
+                {
+                    "lang": "C# .NET Framework (WPF)",
+                    "percent": 25
+                },
+                {
+                    "lang": "T-SQL (MSSQL)",
+                    "percent": 20
+                },
+                {
+                    "lang": "R",
+                    "percent": 10
+                },
+                {
+                    "lang": "Other",
+                    "percent": 5
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "start_date": "Sept 2018",
+            "end_date": "June 2020",
+            "company": "Carleton University",
+            "position": "Teaching Assistant",
+            "current": false,
+            "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tristique risus at urna malesuada, in semper arcu rutrum. Ut nisl urna, viverra non iaculis bibendum, auctor nec urna. Praesent faucibus ullamcorper lorem a pulvinar. Proin sed neque pharetra, dignissim ipsum non, facilisis ipsum. Cras sit amet nulla placerat, aliquam lorem ac, tristique nibh. ",
+            "duties": [
+                {
+                    "title": "Desktop Software",
+                    "time_slice": 60
+                },
+                {
+                    "title": "Documentation",
+                    "time_slice": 10
+                },
+                {
+                    "title": "Embedded Software",
+                    "time_slice": 10
+                },
+                {
+                    "title": "Engineering Troubleshooting",
+                    "time_slice": 15
+                },
+                {
+                    "title": "Misc",
+                    "time_slice": 5
+                }
+            ],
+            "technologies": [
+                {
+                    "lang": "C# .NET Framework (Win Forms)",
+                    "percent": 30
+                },
+                {
+                    "lang": "C# .NET Framework (WPF)",
+                    "percent": 25
+                },
+                {
+                    "lang": "T-SQL (MSSQL)",
+                    "percent": 20
+                },
+                {
+                    "lang": "R",
+                    "percent": 10
+                },
+                {
+                    "lang": "Other",
+                    "percent": 5
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "start_date": "May 2018",
+            "end_date": "Aug 2018",
+            "company": "Elemental Data Collection",
+            "position": "Market Research Interviewer",
+            "current": false,
+            "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tristique risus at urna malesuada, in semper arcu rutrum. Ut nisl urna, viverra non iaculis bibendum, auctor nec urna. Praesent faucibus ullamcorper lorem a pulvinar. Proin sed neque pharetra, dignissim ipsum non, facilisis ipsum. Cras sit amet nulla placerat, aliquam lorem ac, tristique nibh. ",
+            "duties": [
+                {
+                    "title": "Desktop Software",
+                    "time_slice": 60
+                },
+                {
+                    "title": "Documentation",
+                    "time_slice": 10
+                },
+                {
+                    "title": "Embedded Software",
+                    "time_slice": 10
+                },
+                {
+                    "title": "Engineering Troubleshooting",
+                    "time_slice": 15
+                },
+                {
+                    "title": "Misc",
+                    "time_slice": 5
+                }
+            ],
+            "technologies": [
+                {
+                    "lang": "C# .NET Framework (Win Forms)",
+                    "percent": 30
+                },
+                {
+                    "lang": "C# .NET Framework (WPF)",
+                    "percent": 25
+                },
+                {
+                    "lang": "T-SQL (MSSQL)",
+                    "percent": 20
+                },
+                {
+                    "lang": "R",
+                    "percent": 10
+                },
+                {
+                    "lang": "Other",
+                    "percent": 5
+                }
+            ]
+        }
+    ],
+
     "languages": [
         {
             "id": 0,

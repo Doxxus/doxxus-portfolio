@@ -8,6 +8,7 @@
     import Skillset from './skillset.svelte';
 
     import * as info from '../json/info.json';
+    import Experience from './experience.svelte';
 
     onMount(() => { 
         document.title = "Doxxus Portfolio";
@@ -32,6 +33,19 @@
 
     function ToggleExpand(show: boolean): boolean {
         return !show;
+    }
+
+    let OpenExperiences: Function;
+    let CloseExperiences: Function;
+
+    function OpenExperiencesCheck() {
+        if (show_experience) return;
+        OpenExperiences();
+    }
+
+    function CloseExperiencesCheck() {
+        if (show_experience) return;
+        CloseExperiences();
     }
 
     //#region Spring-in Actions
@@ -115,8 +129,9 @@
             <p class="text-zinc-800 dark:text-zinc-200 tight">I'm currently interested in learning the SvelteKit framework and associated TypeScript web stack.</p>
         </div>
         <div class="center">
-            <div id="Experience" class="info_base fade_in" class:expand={show_experience} style="--expand_height: 520px;" bind:this={Elements.eleExperience} on:click={() => {show_experience = ToggleExpand(show_experience)}} on:keydown={() => {show_experience = ToggleExpand(show_experience)}}>
+            <div id="Experience" class="info_base fade_in" class:expand={show_experience} style="--expand_height: 520px;" bind:this={Elements.eleExperience} on:mouseenter={() => {OpenExperiencesCheck();}} on:mouseleave={() => {CloseExperiencesCheck();}} on:click={() => {show_experience = ToggleExpand(show_experience); OpenExperiencesCheck();}} on:keydown={() => {show_experience = ToggleExpand(show_experience)}}>
                 <span class="sub_heading">Experience</span>
+                <Experience experiences='{info.experiences}' bind:open_timeline={OpenExperiences} bind:close_timeline={CloseExperiences}></Experience>
             </div>
             <div id="Languages" class="info_base fade_in" class:expand={show_skillset} style="--expand_height: {(info.languages.length * 40) + 50}px;" bind:this={Elements.eleLanguages} on:mouseenter={() => {init_skillset = true}} on:mouseleave={() => {init_skillset = false}} on:click={() => {show_skillset = ToggleExpand(show_skillset)}} on:keydown={() => {show_skillset = ToggleExpand(show_skillset)}}>
                 <span class="sub_heading">Skills</span>
@@ -136,6 +151,14 @@
 </main>
 
 <style lang="scss">
+    $n: 6;
+    
+    @for $i from 1 through $n {
+        .fade_in:nth-child(#{$i}) {
+            transition-delay: 200ms * $i;
+        }
+    }
+
     .expand {
         height: var(--expand_height);
         border-width: 2px;
