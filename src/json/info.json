@@ -164,51 +164,6 @@
     "languages": [
         {
             "id": 0,
-            "name": "C#",
-            "proficiency": 100,
-            "expand": false,
-            "image_path": "../langs/c_sharp.png",
-            "about": "C# is probably the language I'm most proficient with currently, I use it for my current job pretty much every day. It's a great language to write robust, scaleable, and maintainable codebases so it's my go-to for anything that needs to be done well, especicially if I don't care too much about memory management.",
-            "frameworks": [
-                {
-                    "id": 0,
-                    "name": ".NET Framework",
-                    "expand": false,
-                    "image_path": "../frameworks/net_framework.png",
-                    "about": "TEST"
-                },
-                {
-                    "id": 1,
-                    "name": ".NET Core",
-                    "expand": false,
-                    "image_path": "../frameworks/net_core.png",
-                    "about": "TEST"
-                },
-                {
-                    "id": 2,
-                    "name": "WPF",
-                    "expand": false,
-                    "image_path": "../frameworks/wpf.png",
-                    "about": "TEST"
-                },
-                {
-                    "id": 3,
-                    "name": "Infragistics",
-                    "expand": false,
-                    "image_path": "../frameworks/infragistics.png",
-                    "about": "TEST"
-                },
-                {
-                    "id": 4,
-                    "name": "Sci-Chart",
-                    "expand": false,
-                    "image_path": "../frameworks/sci_chart.png",
-                    "about": "TEST"
-                }
-            ]
-        },
-        {
-            "id": 1,
             "name": "Javascript",
             "proficiency": 65,
             "expand": false,
@@ -281,7 +236,7 @@
             ]
         },
         {
-            "id": 2,
+            "id": 1,
             "name": "TypeScript",
             "proficiency": 75,
             "expand": false,
@@ -332,156 +287,10 @@
                 }
             ]
         },
-
         {
-            "id": 3,
-            "name": "Python",
-            "proficiency": 73,
-            "expand": false,
-            "image_path": "../langs/python.png",
-            "about": "Python is my go-to language whenever I want to script something out quickly with not much planning / boilerplate overhead. That and machine learning, who could have guessed. I'm an decently proficient with Python and it's various essential API's.",
-            "frameworks": [
-                {
-                    "id": 0,
-                    "name": "Numpy",
-                    "expand": false,
-                    "image_path": "../frameworks/numpy.png",
-                    "about": "TEST"
-                },
-                {
-                    "id": 1,
-                    "name": "Tensorflow",
-                    "expand": false,
-                    "image_path": "../frameworks/tensorflow.png",
-                    "about": "TEST"
-                },
-                {
-                    "id": 2,
-                    "name": "Pandas",
-                    "expand": false,
-                    "image_path": "../frameworks/pandas.png",
-                    "about": "TEST"
-                }
-            ]
-        },
-        {
-            "id": 4,
-            "name": "R",
-            "proficiency": 45,
-            "expand": false,
-            "image_path": "../langs/r.png",
-            "about": "I began using R for my current job and then fell in love with R shiny. I don't get to use it much any more but it's a fun language none the less, I'd say I'm still a novice with it however.",
-            "frameworks": [
-                {
-                    "id": 0,
-                    "name": "Shiny",
-                    "expand": false,
-                    "image_path": "../frameworks/shiny.png",
-                    "about": "TEST"
-                },
-                {
-                    "id": 1,
-                    "name": "Plotly",
-                    "expand": false,
-                    "image_path": "../frameworks/plotly.png",
-                    "about": "TEST"
-                },
-                {
-                    "id": 2,
-                    "name": "ggplot2",
-                    "expand": false,
-                    "image_path": "../frameworks/ggplot2.png",
-                    "about": "TEST"
-                }
-            ]
-        },
-        {
-            "id": 5,
-            "name": "Java",
-            "proficiency": 70,
-            "expand": false,
-            "image_path": "../langs/java.png",
-            "about" : "I'd much prefer to use C# if I'm going to be using a strongly-typed, garbage-collected language as I think it does a lot of what Java can do but better. However, I still have to write some good ol' Java every once in a while and I'd say I'm reasonably decent with it.",
-            "frameworks" : [
-                {
-                    "id": 0,
-                    "name": "Spring",
-                    "expand": false,
-                    "image_path": "../frameworks/spring.png",
-                    "about": "TEST"
-                },
-                {
-                    "id": 1,
-                    "name": "Android Studio",
-                    "expand": false,
-                    "image_path": "../frameworks/android_studio.png",
-                    "about": "TEST"
-                }
-            ]
-        },
-        {
-            "id": 6,
-            "name": "C++",
-            "proficiency": 90,
-            "expand": false,
-            "image_path": "../langs/c++.png",
-            "about": "Probably one of the most powerfull languages I've used, especially if you do any OpenGL programming (which I have in the past). I haven't used it too much recently but I know if I ever need to again, I'll be proficient in it.",
-            "frameworks": [
-                {
-                    "id": 0,
-                    "name": "QT",
-                    "expand": false,
-                    "image_path": "../frameworks/qt.png",
-                    "about": "TEST"
-                }
-            ]
-        },
-        {
-            "id": 7,
-            "name": "C",
-            "proficiency": 75,
-            "expand": false,
-            "image_path": "../langs/c.png",
-            "about": "C was the first real programming language I learned, and I've had to use it a fair amount for my current position programming embeded software. It will always have a soft spot in my heart.",
-            "frameworks": []
-        },
-        {
-            "id": 8,
-            "name": "SQL",
-            "proficiency": 65,
-            "expand": false,
-            "image_path": "../langs/sql.png",
-            "about": "Structured Query Language: It's alright. I'm an intermediate developer with SQL, I can write stored procedures and do some joining, what's not to love?",
-            "frameworks": [
-                {
-                    "id": 0,
-                    "name": "T-SQL",
-                    "expand": false,
-                    "image_path": "../frameworks/t_sql.png",
-                    "about": "TEST"
-                },
-                {
-                    "id": 1,
-                    "name": "Azure SQL",
-                    "expand": false,
-                    "image_path": "../frameworks/azure_sql.png",
-                    "about": "TEST"
-                }
-            ]
-        },      
-        {
-            "id": 9,
-            "name": "PHP",
-            "proficiency": 40,
-            "expand": false,
-            "image_path": "../langs/php.png",
-            "about": "PHP Hypertext Preprocessor. I used it for a couple of projects back in my highschool days before nice reactive javascript frameworks were a thing, but haven't touched it since. I'd say I'm a novice with it due to it being over a decade since I've written anything with it.",
-            "frameworks": []
-        },
-        {
-            "id": 10,
+            "id": 2,
             "name": "CSS",
-            "proficiency": 75,
+            "proficiency": 80,
             "expand": false,
             "image_path": "../langs/css3.png",
             "about": "80% of my time developing web apps is spent playing around with the CSS, moreso now that I've picked up tailwind, which streamlines the whole process and makes things much nicer to do. Love me some good styles and good formatting.",
@@ -517,12 +326,202 @@
             ]
         },
         {
-            "id": 11,
+            "id": 3,
             "name": "HTML",
             "proficiency": 70,
             "expand": false,
             "image_path": "../langs/html5.png",
             "about": "80% of my time developing web apps is spent playing around with the CSS, moreso now that I've picked up tailwind, which streamlines the whole process and makes things much nicer to do. Love me some good styles and good formatting.",
+            "frameworks": []
+        },
+        {
+            "id": 4,
+            "name": "SQL",
+            "proficiency": 65,
+            "expand": false,
+            "image_path": "../langs/sql.png",
+            "about": "Structured Query Language: It's alright. I'm an intermediate developer with SQL, I can write stored procedures and do some joining, what's not to love?",
+            "frameworks": [
+                {
+                    "id": 0,
+                    "name": "T-SQL",
+                    "expand": false,
+                    "image_path": "../frameworks/t_sql.png",
+                    "about": "TEST"
+                },
+                {
+                    "id": 1,
+                    "name": "Azure SQL",
+                    "expand": false,
+                    "image_path": "../frameworks/azure_sql.png",
+                    "about": "TEST"
+                }
+            ]
+        },   
+        {
+            "id": 5,
+            "name": "C#",
+            "proficiency": 100,
+            "expand": false,
+            "image_path": "../langs/c_sharp.png",
+            "about": "C# is probably the language I'm most proficient with currently, I use it for my current job pretty much every day. It's a great language to write robust, scaleable, and maintainable codebases so it's my go-to for anything that needs to be done well, especicially if I don't care too much about memory management.",
+            "frameworks": [
+                {
+                    "id": 0,
+                    "name": ".NET Framework",
+                    "expand": false,
+                    "image_path": "../frameworks/net_framework.png",
+                    "about": "TEST"
+                },
+                {
+                    "id": 1,
+                    "name": ".NET Core",
+                    "expand": false,
+                    "image_path": "../frameworks/net_core.png",
+                    "about": "TEST"
+                },
+                {
+                    "id": 2,
+                    "name": "WPF",
+                    "expand": false,
+                    "image_path": "../frameworks/wpf.png",
+                    "about": "TEST"
+                },
+                {
+                    "id": 3,
+                    "name": "Infragistics",
+                    "expand": false,
+                    "image_path": "../frameworks/infragistics.png",
+                    "about": "TEST"
+                },
+                {
+                    "id": 4,
+                    "name": "Sci-Chart",
+                    "expand": false,
+                    "image_path": "../frameworks/sci_chart.png",
+                    "about": "TEST"
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "name": "C++",
+            "proficiency": 90,
+            "expand": false,
+            "image_path": "../langs/c++.png",
+            "about": "Probably one of the most powerfull languages I've used, especially if you do any OpenGL programming (which I have in the past). I haven't used it too much recently but I know if I ever need to again, I'll be proficient in it.",
+            "frameworks": [
+                {
+                    "id": 0,
+                    "name": "QT",
+                    "expand": false,
+                    "image_path": "../frameworks/qt.png",
+                    "about": "TEST"
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "name": "C",
+            "proficiency": 75,
+            "expand": false,
+            "image_path": "../langs/c.png",
+            "about": "C was the first real programming language I learned, and I've had to use it a fair amount for my current position programming embeded software. It will always have a soft spot in my heart.",
+            "frameworks": []
+        }, 
+        {
+            "id": 8,
+            "name": "Python",
+            "proficiency": 73,
+            "expand": false,
+            "image_path": "../langs/python.png",
+            "about": "Python is my go-to language whenever I want to script something out quickly with not much planning / boilerplate overhead. That and machine learning, who could have guessed. I'm an decently proficient with Python and it's various essential API's.",
+            "frameworks": [
+                {
+                    "id": 0,
+                    "name": "Numpy",
+                    "expand": false,
+                    "image_path": "../frameworks/numpy.png",
+                    "about": "TEST"
+                },
+                {
+                    "id": 1,
+                    "name": "Tensorflow",
+                    "expand": false,
+                    "image_path": "../frameworks/tensorflow.png",
+                    "about": "TEST"
+                },
+                {
+                    "id": 2,
+                    "name": "Pandas",
+                    "expand": false,
+                    "image_path": "../frameworks/pandas.png",
+                    "about": "TEST"
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "name": "R",
+            "proficiency": 45,
+            "expand": false,
+            "image_path": "../langs/r.png",
+            "about": "I began using R for my current job and then fell in love with R shiny. I don't get to use it much any more but it's a fun language none the less, I'd say I'm still a novice with it however.",
+            "frameworks": [
+                {
+                    "id": 0,
+                    "name": "Shiny",
+                    "expand": false,
+                    "image_path": "../frameworks/shiny.png",
+                    "about": "TEST"
+                },
+                {
+                    "id": 1,
+                    "name": "Plotly",
+                    "expand": false,
+                    "image_path": "../frameworks/plotly.png",
+                    "about": "TEST"
+                },
+                {
+                    "id": 2,
+                    "name": "ggplot2",
+                    "expand": false,
+                    "image_path": "../frameworks/ggplot2.png",
+                    "about": "TEST"
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "name": "Java",
+            "proficiency": 70,
+            "expand": false,
+            "image_path": "../langs/java.png",
+            "about" : "I'd much prefer to use C# if I'm going to be using a strongly-typed, garbage-collected language as I think it does a lot of what Java can do but better. However, I still have to write some good ol' Java every once in a while and I'd say I'm reasonably decent with it.",
+            "frameworks" : [
+                {
+                    "id": 0,
+                    "name": "Spring",
+                    "expand": false,
+                    "image_path": "../frameworks/spring.png",
+                    "about": "TEST"
+                },
+                {
+                    "id": 1,
+                    "name": "Android Studio",
+                    "expand": false,
+                    "image_path": "../frameworks/android_studio.png",
+                    "about": "TEST"
+                }
+            ]
+        }, 
+        {
+            "id": 11,
+            "name": "PHP",
+            "proficiency": 40,
+            "expand": false,
+            "image_path": "../langs/php.png",
+            "about": "PHP Hypertext Preprocessor. I used it for a couple of projects back in my highschool days before nice reactive javascript frameworks were a thing, but haven't touched it since. I'd say I'm a novice with it due to it being over a decade since I've written anything with it.",
             "frameworks": []
         },
         {

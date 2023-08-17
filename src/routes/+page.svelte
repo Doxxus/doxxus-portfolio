@@ -6,15 +6,21 @@
     import { Intro } from '../TypeScripts/intro';
     import { Elements } from '../TypeScripts/elements';
     
+    import Experience from './experience.svelte';
     import Skillset from './skillset.svelte';
     import Contact from './contact.svelte';
-    import Experience from './experience.svelte';
     
     import * as info from '../json/info.json'; 
+
+    let show_links: boolean = false;
 
     onMount(() => { 
         document.title = "Doxxus Portfolio";
         Intro.AnimateIntro();
+
+        setTimeout(() => {
+            show_links = true;
+        }, 5350);
     });
 
     let age: string = "";
@@ -25,11 +31,11 @@
         age = ((Number(today) - Number(birthday)) / (1000 * 60 * 60 * 24 * 365.25)).toFixed(9);
     }, 50);
 
+    let show_about: boolean = false;
     let show_experience: boolean = false;
     let show_skillset: boolean = false;
     let show_projects: boolean = false;
-    let show_contact: boolean = false;
-    let show_links: boolean = false;
+    let show_contact: boolean = false; 
 
     let init_skillset: boolean = false;
     let init_contact: boolean = false;
@@ -132,6 +138,9 @@
             <p class="text-zinc-800 dark:text-zinc-200 tight">I'm currently interested in learning the SvelteKit framework and associated TypeScript web stack.</p>
         </div>
         <div class="center">
+            <div id="About" class="info_base fade_in" class:expand={show_about} style="--expand_height: 150px;" bind:this={Elements.eleEducation} on:click={() => {show_about = ToggleExpand(show_about)}} on:keydown={() => {show_about = ToggleExpand(show_about)}}>
+                <span class="sub_heading">About</span>
+            </div>
             <div id="Experience" class="info_base fade_in" class:expand={show_experience} style="--expand_height: 520px;" bind:this={Elements.eleExperience} on:mouseenter={() => {OpenExperiencesCheck();}} on:mouseleave={() => {CloseExperiencesCheck();}} on:click={() => {show_experience = ToggleExpand(show_experience); OpenExperiencesCheck();}} on:keydown={() => {show_experience = ToggleExpand(show_experience)}}>
                 <span class="sub_heading">Experience</span>
                 <Experience experiences='{info.experiences}' bind:open_timeline={OpenExperiences} bind:close_timeline={CloseExperiences}></Experience>
@@ -147,15 +156,29 @@
                 <span class="sub_heading">Contact</span>
                 <Contact show_contact='{show_contact}' init_contact='{init_contact}'></Contact>
             </div>
-            <div id="Links" class="info_base fade_in" class:expand={show_links} style="--expand_height: 300px;" bind:this={Elements.eleEducation} on:click={() => {show_links = ToggleExpand(show_links)}} on:keydown={() => {show_links = ToggleExpand(show_links)}}>
-                <span class="sub_heading">Links</span>
+            <div class="links_container" class:show={show_links}>
+                <div class="link_container">
+                    <button on:click={() => {window.open("https://github.com/doxxus")}}>
+                        <img class="link_image" src='./links/github.png' alt='' />
+                    </button>
+                </div>
+                <div class="link_container">
+                    <button on:click={() => {window.open("https://www.linkedin.com/in/lachlan-campbell-doxxus/")}}>
+                        <img class="link_image" src='./links/linkedin.png' alt='' />
+                    </button>
+                </div>
+                <div class="link_container">
+                    <button on:click={() => {window.open("./resume_no_reference.pdf")}}>
+                        <img class="link_image" src='./links/resume.png' alt='' />
+                    </button>
+                </div>
             </div>
         </div>
     </div>
 </main>
 
 <style lang="scss">
-    $n: 6;
+    $n: 7;
     
     @for $i from 1 through $n {
         .fade_in:nth-child(#{$i}) {
@@ -166,5 +189,34 @@
     .expand {
         height: var(--expand_height);
         border-width: 2px;
+    }
+
+    .links_container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 40vw;
+        height: fit-content;
+        margin: 10px;
+        margin-left: 30vw;
+        margin-right: 30vw;
+        opacity: 0;
+        transition: opacity 0.2s ease-in-out;
+
+        &.show {
+            opacity: 1;
+        }
+    }
+
+    .link_container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .link_image {
+        width: 50;
+        height: 50px;
     }
 </style>
