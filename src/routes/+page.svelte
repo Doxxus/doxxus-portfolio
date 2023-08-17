@@ -6,6 +6,7 @@
     import { Intro } from '../TypeScripts/intro';
     import { Elements } from '../TypeScripts/elements';
     
+    import About from './about.svelte';
     import Experience from './experience.svelte';
     import Skillset from './skillset.svelte';
     import Contact from './contact.svelte';
@@ -134,12 +135,13 @@
 
     <div id="main_content" bind:this={Elements.eleMainContent}>
         <div id="about" class="fade_in" bind:this={Elements.eleAbout}>
-            <p class="text-zinc-800 dark:text-zinc-200 tight">I'm a <my_age>{age}</my_age> year old programmer with a wide array of experience in many languages, frameworks, and platforms.</p>
-            <p class="text-zinc-800 dark:text-zinc-200 tight">I'm currently interested in learning the SvelteKit framework and associated TypeScript web stack.</p>
+            <p class="text-zinc-200 tight">I'm a <my_age>{age}</my_age> year old programmer with a wide array of experience in many languages, frameworks, and platforms.</p>
+            <p class="text-zinc-200 tight">{info.about_interest}</p>
         </div>
         <div class="center">
-            <div id="About" class="info_base fade_in" class:expand={show_about} style="--expand_height: 150px;" bind:this={Elements.eleEducation} on:click={() => {show_about = ToggleExpand(show_about)}} on:keydown={() => {show_about = ToggleExpand(show_about)}}>
+            <div id="About" class="info_base fade_in" class:expand={show_about} style="--expand_height: 140px;" bind:this={Elements.eleEducation} on:click={() => {show_about = ToggleExpand(show_about)}} on:keydown={() => {show_about = ToggleExpand(show_about)}}>
                 <span class="sub_heading">About</span>
+                <About about_text={info.about_text}></About>
             </div>
             <div id="Experience" class="info_base fade_in" class:expand={show_experience} style="--expand_height: 520px;" bind:this={Elements.eleExperience} on:mouseenter={() => {OpenExperiencesCheck();}} on:mouseleave={() => {CloseExperiencesCheck();}} on:click={() => {show_experience = ToggleExpand(show_experience); OpenExperiencesCheck();}} on:keydown={() => {show_experience = ToggleExpand(show_experience)}}>
                 <span class="sub_heading">Experience</span>
@@ -179,7 +181,7 @@
 
 <style lang="scss">
     $n: 7;
-    
+
     @for $i from 1 through $n {
         .fade_in:nth-child(#{$i}) {
             transition-delay: 200ms * $i;

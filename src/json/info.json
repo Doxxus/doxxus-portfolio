@@ -1,4 +1,7 @@
 {
+    "about_interest": "I'm currently interested in learning the SvelteKit framework and associated TypeScript web stack.",
+    "about_text": "Hi, my name is Lachlan, I have a bachelor's degree in Computer Science and am an avid lover of technology. In my current position, I work with desktop software in C#/WPF/SQL and embedded software in C and C++. I'm currently really interested in doing full stack web development, so I've been using some of my free time to get better at it. When I'm not working, I enjoy tabletop and online gaming with friends, as well as mixing drum and bass music.",
+
     "experiences": [
         {
             "id": 0,
