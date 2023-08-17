@@ -43,7 +43,7 @@
         for (let i = 0; i < show_dots.length; i++) {
             setTimeout(() => {
                 show_dots[i] = true;
-            }, i * 500 + 250);
+            }, i * 500 + 300);
         }
     };
 
@@ -57,7 +57,7 @@
         for (let i = show_dots.length - 1; i >= 0; i--) {
             setTimeout(() => {
                 show_dots[i] = false;
-            }, i * 500 + 250);
+            }, i * 500 + 300);
         }
     }
 

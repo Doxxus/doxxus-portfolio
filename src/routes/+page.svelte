@@ -5,10 +5,12 @@
 
     import { Intro } from '../TypeScripts/intro';
     import { Elements } from '../TypeScripts/elements';
+    
     import Skillset from './skillset.svelte';
-
-    import * as info from '../json/info.json';
+    import Contact from './contact.svelte';
     import Experience from './experience.svelte';
+    
+    import * as info from '../json/info.json'; 
 
     onMount(() => { 
         document.title = "Doxxus Portfolio";
@@ -30,6 +32,7 @@
     let show_links: boolean = false;
 
     let init_skillset: boolean = false;
+    let init_contact: boolean = false;
 
     function ToggleExpand(show: boolean): boolean {
         return !show;
@@ -140,8 +143,9 @@
             <div id="Projects" class="info_base fade_in" class:expand={show_projects} style="--expand_height: 520px;" bind:this={Elements.eleProjects} on:click={() => {show_projects = ToggleExpand(show_projects)}} on:keydown={() => {show_projects = ToggleExpand(show_projects)}}>
                 <span class="sub_heading">Projects</span>
             </div>
-            <div id="Contact" class="info_base fade_in" class:expand={show_contact} style="--expand_height: 520px;" bind:this={Elements.eleContact} on:click={() => {show_contact = ToggleExpand(show_contact)}} on:keydown={() => {show_contact = ToggleExpand(show_contact)}}>
+            <div id="Contact" class="info_base fade_in" class:expand={show_contact} style="--expand_height: 400px;" bind:this={Elements.eleContact} on:mouseenter={() => {init_contact = true}} on:mouseleave={() => {init_contact = false}} on:click={() => {show_contact = ToggleExpand(show_contact)}} on:keydown={() => {show_contact = ToggleExpand(show_contact)}}>
                 <span class="sub_heading">Contact</span>
+                <Contact show_contact='{show_contact}' init_contact='{init_contact}'></Contact>
             </div>
             <div id="Links" class="info_base fade_in" class:expand={show_links} style="--expand_height: 300px;" bind:this={Elements.eleEducation} on:click={() => {show_links = ToggleExpand(show_links)}} on:keydown={() => {show_links = ToggleExpand(show_links)}}>
                 <span class="sub_heading">Links</span>

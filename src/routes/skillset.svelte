@@ -177,6 +177,7 @@
         padding-top: 10px;
         height: fit-content;
         text-align: center;
+        font-size: 0.8em;
     }
 
     .frameworks_title {

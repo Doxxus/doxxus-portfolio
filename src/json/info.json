@@ -448,7 +448,7 @@
         {
             "id": 8,
             "name": "SQL",
-            "proficiency": 55,
+            "proficiency": 65,
             "expand": false,
             "image_path": "../langs/sql.png",
             "about": "Structured Query Language: It's alright. I'm an intermediate developer with SQL, I can write stored procedures and do some joining, what's not to love?",
