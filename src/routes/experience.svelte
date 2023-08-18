@@ -118,11 +118,12 @@
     .experiences_container {
         display: flex;
         flex-direction: column;
+        width: 100%;
+        padding-right: 2%;
     }
 
     .experience_container {
         position: relative;
-        top: var(--top_down);
         height: 200px;
         width: 100%;
         grid-column: col3 / col4;

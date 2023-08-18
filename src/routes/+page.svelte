@@ -114,7 +114,7 @@
     //#endregion
 </script>
 
-<main> 
+<main class="main_page_container"> 
     <div class="space_background"></div>
 
     <div id="title" bind:this={Elements.eleTitle}>

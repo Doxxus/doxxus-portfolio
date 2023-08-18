@@ -23,6 +23,7 @@
     main {
         display: flex;
         flex-direction: column;
+        max-width: 100%;
     }
 
     .rect_container {
