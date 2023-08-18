@@ -38,6 +38,7 @@
     let show_projects: boolean = false;
     let show_contact: boolean = false; 
 
+    let init_about: boolean = false;
     let init_skillset: boolean = false;
     let init_contact: boolean = false;
 
@@ -139,9 +140,9 @@
             <p class="text-zinc-200 tight">{info.about_interest}</p>
         </div>
         <div class="center">
-            <div id="About" class="info_base fade_in" class:expand={show_about} style="--expand_height: 140px;" bind:this={Elements.eleEducation} on:click={() => {show_about = ToggleExpand(show_about)}} on:keydown={() => {show_about = ToggleExpand(show_about)}}>
+            <div id="About" class="info_base fade_in" class:expand={show_about} style="--expand_height: 140px;" bind:this={Elements.eleEducation} on:mouseenter={() => {init_about = true}} on:mouseleave={() => {init_about = false}} on:click={() => {show_about = ToggleExpand(show_about)}} on:keydown={() => {show_about = ToggleExpand(show_about)}}>
                 <span class="sub_heading">About</span>
-                <About about_text={info.about_text}></About>
+                <About about_text={info.about_text} show_about={show_about} init_about={init_about}></About>
             </div>
             <div id="Experience" class="info_base fade_in" class:expand={show_experience} style="--expand_height: 520px;" bind:this={Elements.eleExperience} on:mouseenter={() => {OpenExperiencesCheck();}} on:mouseleave={() => {CloseExperiencesCheck();}} on:click={() => {show_experience = ToggleExpand(show_experience); OpenExperiencesCheck();}} on:keydown={() => {show_experience = ToggleExpand(show_experience)}}>
                 <span class="sub_heading">Experience</span>
