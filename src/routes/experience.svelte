@@ -71,7 +71,7 @@
             <span class="dot_marker_inner" class:dot_marker_animate={show_dot} style="animation-delay:100ms"></span>
             <span class="dot_marker_outer" class:dot_marker_animate={show_dot} style="animation-delay:0ms"></span>
         </div>
-        <div class="timeline_container" style="--height: {experiences.length * experience_default_size - 100}px; --duration: {experiences.length * 500}ms">         
+        <div class="timeline_container" style="--height: {experiences.length * experience_default_size - 100}px; --duration: {experiences.length * 370 + 100}ms">         
             <div class="vert_line" class:show={expand_line}></div>            
         </div>
 

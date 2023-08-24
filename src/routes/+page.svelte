@@ -3,9 +3,10 @@
     import { spring } from 'svelte/motion';
     import type { Action } from 'svelte/action';
 
-    import { Intro } from '../TypeScripts/intro';
-    import { Elements } from '../TypeScripts/elements';
-    
+    import { Intro } from '../scripts/intro';
+    import { Elements } from '../scripts/elements';
+    import { init } from '../scripts/stars';
+
     import About from './about.svelte';
     import Experience from './experience.svelte';
     import Skillset from './skillset.svelte';
@@ -17,6 +18,9 @@
 
     onMount(() => { 
         document.title = "Doxxus Portfolio";
+
+        init();
+
         Intro.AnimateIntro();
 
         setTimeout(() => {
@@ -115,7 +119,12 @@
 </script>
 
 <main class="main_page_container"> 
-    <div class="space_background"></div>
+    <!-- <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div> -->
+    <div class="background">
+        <canvas id="stars" bind:this={Elements.starCanvas} width="300" height="300"></canvas>
+    </div>
 
     <div id="title" bind:this={Elements.eleTitle}>
         <div class="rectangle-60" use:springInFromRight={{translateX: 0, translateY: 0}}>
@@ -144,7 +153,7 @@
                 <span class="sub_heading">About</span>
                 <About about_text={info.about_text} show_about={show_about} init_about={init_about}></About>
             </div>
-            <div id="Experience" class="info_base fade_in" class:expand={show_experience} style="--expand_height: 520px;" bind:this={Elements.eleExperience} on:mouseenter={() => {OpenExperiencesCheck();}} on:mouseleave={() => {CloseExperiencesCheck();}} on:click={() => {show_experience = ToggleExpand(show_experience); OpenExperiencesCheck();}} on:keydown={() => {show_experience = ToggleExpand(show_experience)}}>
+            <div id="Experience" class="info_base fade_in" class:expand={show_experience} style="--expand_height: {info.experiences.length * 200 + 100}px" bind:this={Elements.eleExperience} on:mouseenter={() => {OpenExperiencesCheck();}} on:mouseleave={() => {CloseExperiencesCheck();}} on:click={() => {show_experience = ToggleExpand(show_experience); OpenExperiencesCheck();}} on:keydown={() => {show_experience = ToggleExpand(show_experience)}}>
                 <span class="sub_heading">Experience</span>
                 <Experience experiences='{info.experiences}' bind:open_timeline={OpenExperiences} bind:close_timeline={CloseExperiences}></Experience>
             </div>
@@ -180,13 +189,26 @@
     </div>
 </main>
 
-<style lang="scss">
+<style lang="scss">   
     $n: 7;
 
     @for $i from 1 through $n {
         .fade_in:nth-child(#{$i}) {
             transition-delay: 200ms * $i;
         }
+    }
+
+    .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        box-sizing: content-box;
+        background-size: cover;
+        position: fixed;
+        background-color: #31102F; //#280B29
+	    background: radial-gradient(ellipse at center, #302D3E 0%, #343044 100%);
     }
 
     .expand {

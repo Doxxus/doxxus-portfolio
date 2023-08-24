@@ -17,4 +17,6 @@ export namespace Elements {
     export let lineDown: SVGLineElement;
     export let leftLine: SVGLineElement;
     export let rightLine: SVGLineElement;
+
+    export let starCanvas: HTMLCanvasElement;
 }
