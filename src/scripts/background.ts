@@ -4,21 +4,22 @@ import { Elements } from './elements';
 import { Delaunay } from './Delaunay';
 
 // Settings
-let particleCount = 25;
-let	flareCount = 5;
+let particleCount = 20;
+let	flareCount = 10;
 let	motion = 0.05;
 let	color = '#DAD5EA';
+let meshOpacity = 0.15;
 let	particleSizeBase = 1;
 let	particleSizeMultiplier = 0.5;
 let	flareSizeBase = 100;
 let	flareSizeMultiplier = 100;
 let	lineWidth = 1;
-let	linkChance = 75; // chance per frame of link; higher = smaller chance
-let	linkLengthMin = 5; // min linked vertices
+let	linkChance = 85; // chance per frame of link; higher = smaller chance
+let	linkLengthMin = 3; // min linked vertices
 let	linkLengthMax = 7; // max linked vertices
 let	linkOpacity = 0.25; // number between 0 & 1
-let	linkFade = 50; // link fade-out frames
-let	linkSpeed = 1; // distance a link travels in 1 frame
+let	linkFade = 75; // link fade-out frames
+let	linkSpeed = 0.8; // distance a link travels in 1 frame
 let	glareAngle = -60;
 let	glareOpacityMultiplier = 0.05;
 let	renderParticles = true;
@@ -27,7 +28,7 @@ let	renderFlares = true;
 let	renderLinks = true;
 let	renderMesh = false;
 let	flicker = true;
-let	flickerSmoothing = 15; // higher = smoother flicker
+let	flickerSmoothing = 50; // higher = smoother flicker
 let	blurSize = 1;
 let	randomMotion = true;
 let	noiseLength = 1000;
@@ -117,7 +118,6 @@ export function init() {
 
 	// Motion mode
 	if ('ontouchstart' in document.documentElement && window.DeviceOrientationEvent) {
-		console.log('Using device orientation');
 		window.addEventListener('deviceorientation', function(e: DeviceOrientationEvent) {
             if (e.gamma === null || e.beta === null) return;
 
@@ -127,7 +127,6 @@ export function init() {
 	}
 	else {
 		// Mouse move listener
-		console.log('Using mouse movement');
 		document.body.addEventListener('mousemove', function(e) {
 			mouse.x = e.clientX;
 			mouse.y = e.clientY;
@@ -172,6 +171,7 @@ function render() {
 	if (renderMesh) {
 		// Render all lines
 		context.beginPath();
+        context.globalAlpha = meshOpacity;
 
 		for (var v = 0; v < vertices.length-1; v++) {
 			// Splits the array into triplets
@@ -191,6 +191,7 @@ function render() {
 		context.lineWidth = lineWidth;
 		context.stroke();
 		context.closePath();
+        context.globalAlpha = 1;
 	}
 
 	if (renderLinks) {
@@ -240,8 +241,8 @@ class Particle {
     neighbors: Array<number>;
 
     constructor() {
-        this.x = random(-0.1, 1.1, true);
-        this.y = random(-0.1, 1.1, true);
+        this.x = random(-0.02, 1.02, true);
+        this.y = random(-0.02, 1.02, true);
         this.z = random(0,4);
         this.color = color;
         this.opacity = random(0.1,1,true);
