@@ -4,8 +4,8 @@ import { Elements } from './elements';
 import { Delaunay } from './Delaunay';
 
 // Settings
-let particleCount = 50;
-let	flareCount = 7;
+let particleCount = 25;
+let	flareCount = 5;
 let	motion = 0.05;
 let	color = '#DAD5EA';
 let	particleSizeBase = 1;
@@ -60,7 +60,7 @@ export function init() {
 	const requestAnimFrame = (function() {
 		return  window.requestAnimationFrame ||
 				function( callback ){
-					window.setTimeout(callback, 1000 / 60);
+					window.setTimeout(callback, 1000 / 10);
 				};
 	})();
 
@@ -134,7 +134,6 @@ export function init() {
 		});
 	}
 
-	// Animation loop
 	(function animloop(){
 		requestAnimFrame(animloop);
 		resize();
