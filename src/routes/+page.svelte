@@ -5,7 +5,7 @@
 
     import { Intro } from '../scripts/intro';
     import { Elements } from '../scripts/elements';
-    import { init } from '../scripts/stars';
+    import * as background from '../scripts/background';
 
     import About from './about.svelte';
     import Experience from './experience.svelte';
@@ -19,8 +19,7 @@
     onMount(() => { 
         document.title = "Doxxus Portfolio";
 
-        init();
-
+        background.init();
         Intro.AnimateIntro();
 
         setTimeout(() => {
