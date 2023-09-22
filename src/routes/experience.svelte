@@ -98,7 +98,7 @@
         });
     });
 
-    const hoverTech = (event: MouseEvent, technology: technologies) => {       
+    const hoverTech = (event: MouseEvent, technologies: Array<technologies>) => {       
         let div: HTMLDivElement = event.target as HTMLDivElement;
         if (div === null) return;
 
@@ -107,14 +107,21 @@
 
         outer_div.childNodes.forEach((child: ChildNode) => {
             let inner_div: HTMLDivElement = child as HTMLDivElement;
-            inner_div.style.width = (20 / experiences.length - 1).toString() + "%";
-        });
+            inner_div.style.width = (20 / (technologies.length - 1)).toString() + "%";
+        });      
 
-        technology.hovered = true;
+        let p: HTMLParagraphElement = div.firstElementChild as HTMLParagraphElement;
+        p.classList.add("show");
+        
+        if (outer_div.childNodes.length == 1) {
+            div.style.width = "100%";
+            return;
+        }
+
         div.style.width = "80%";
     }
 
-    const unhoverTech = (event: MouseEvent, experience: experience, technology: technologies) => {
+    const unhoverTech = (event: MouseEvent, experience: experience) => {
         let div: HTMLDivElement = event.target as HTMLDivElement;
         if (div === null) return;
 
@@ -126,7 +133,8 @@
             inner_div.style.width = experience.technologies[i].percent.toString() + "%";
         }
 
-        technology.hovered = false;
+        let p: HTMLParagraphElement = div.firstElementChild as HTMLParagraphElement;
+        p.classList.remove("show");
     }
 
 </script>
@@ -165,7 +173,7 @@
                             <h2 style="text-align: right; margin-right: 5px;">Technologies Used </h2>
                             <div class="technologies_container">
                                 {#each experience.technologies as technology}
-                                    <div on:mouseenter={(event) => hoverTech(event, technology)} on:mouseleave={(event) => unhoverTech(event, experience, technology)} class="technology" style="width: {technology.percent}%; background-color: {technology.color}">
+                                    <div on:mouseenter={(event) => hoverTech(event, experience.technologies)} on:mouseleave={(event) => unhoverTech(event, experience)} class="technology" style="width: {technology.percent}%; background-color: {technology.color}">
                                         <p class="technology_name" class:show={technology.hovered}>{technology.lang}</p>
                                     </div>
                                 {/each}
@@ -260,13 +268,15 @@
         text-align: center;
         display: flex;
         align-items: center;
-        transition: 0.2s ease-in-out;
-        opacity: 50%;
+        transition: 0.3s ease-in-out;
     }
 
     .technology_name {
         opacity: 0%;
-        transition: 0.2s ease-in-out;
+        width: 100%;
+        transition: 0.3s ease-in-out;
+        text-align: center;
+        font-size: 1.2em;
 
         &.show {
             opacity: 100%;
@@ -275,7 +285,6 @@
 
     .duties_chart {
         margin: 10px;
-        opacity: 50%;
     }
 
     .show-me:nth-child(n) {

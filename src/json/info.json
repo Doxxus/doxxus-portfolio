@@ -15,58 +15,58 @@
                 {
                     "title": "Misc",
                     "time_slice": 5,
-                    "color": "#AACDFF"
+                    "color": "#AACDFF80"
                 },
                 {
                     "title": "Desktop Software",
                     "time_slice": 60,
-                    "color": "#FEBAFF"
+                    "color": "#FEBAFF80"
                 },
                 {
                     "title": "Documentation",
                     "time_slice": 10,
-                    "color": "#9e6aff"
+                    "color": "#9e6aff80"
                 },
                 {
                     "title": "Embedded Software",
                     "time_slice": 10,
-                    "color": "#D2AAFF"
+                    "color": "#D2AAFF80"
                 },
                 {
                     "title": "Engineering Troubleshooting",
                     "time_slice": 15,
-                    "color": "#AEAAFF"
+                    "color": "#AEAAFF80"
                 }                
             ],
             "technologies": [
                 {
-                    "lang": "R",
+                    "lang": "R / R-Shiny",
                     "percent": 10,
-                    "color": "#AACDFF",
+                    "color": "#AACDFF80",
                     "hovered": false
                 },
                 {
                     "lang": "C# .NET Framework (Win Forms)",
                     "percent": 35,
-                    "color": "#FEBAFF",
+                    "color": "#FEBAFF80",
                     "hovered": false
                 },
                 {
                     "lang": "C# .NET Framework (WPF)",
                     "percent": 30,
-                    "color": "#9e6aff",
+                    "color": "#9e6aff80",
                     "hovered": false
                 },
                 {
                     "lang": "T-SQL (MSSQL)",
                     "percent": 20,
-                    "color": "#D2AAFF",
+                    "color": "#D2AAFF80",
                     "hovered": false
                 },
                 {
-                    "lang": "Other",
+                    "lang": "Other (Python, Javascript, SAS JMP Script)",
                     "percent": 5,
-                    "color": "#AEAAFF",
+                    "color": "#AEAAFF80",
                     "hovered": false
                 }
             ]
@@ -81,60 +81,66 @@
             "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tristique risus at urna malesuada, in semper arcu rutrum. Ut nisl urna, viverra non iaculis bibendum, auctor nec urna. Praesent faucibus ullamcorper lorem a pulvinar. Proin sed neque pharetra, dignissim ipsum non, facilisis ipsum. Cras sit amet nulla placerat, aliquam lorem ac, tristique nibh. ",
             "duties": [
                 {
-                    "title": "Misc",
-                    "time_slice": 5,
-                    "color": "#AACDFF"
+                    "title": "Marking Assignments",
+                    "time_slice": 20,
+                    "color": "#AACDFF80"
                 },
                 {
-                    "title": "Desktop Software",
-                    "time_slice": 60,
-                    "color": "#FEBAFF"
+                    "title": "Holding Office Hours",
+                    "time_slice": 30,
+                    "color": "#FEBAFF80"
                 },
                 {
-                    "title": "Documentation",
-                    "time_slice": 10,
-                    "color": "#9e6aff"
+                    "title": "Hosting Tutorial Sessions",
+                    "time_slice": 30,
+                    "color": "#9e6aff80"
                 },
                 {
-                    "title": "Embedded Software",
-                    "time_slice": 10,
-                    "color": "#D2AAFF"
-                },
-                {
-                    "title": "Engineering Troubleshooting",
+                    "title": "Creating Code Demos",
                     "time_slice": 15,
-                    "color": "#AEAAFF"
+                    "color": "#D2AAFF80"
+                },
+                {
+                    "title": "Proctoring Exams",
+                    "time_slice": 5,
+                    "color": "#AEAAFF80"
                 }                
             ],
             "technologies": [
                 {
-                    "lang": "R",
-                    "percent": 10,
-                    "color": "#AACDFF",
-                    "hovered": false
-                },
-                {
-                    "lang": "C# .NET Framework (Win Forms)",
-                    "percent": 35,
-                    "color": "#FEBAFF",
-                    "hovered": false
-                },
-                {
-                    "lang": "C# .NET Framework (WPF)",
-                    "percent": 30,
-                    "color": "#9e6aff",
-                    "hovered": false
-                },
-                {
-                    "lang": "T-SQL (MSSQL)",
-                    "percent": 20,
-                    "color": "#D2AAFF",
-                    "hovered": false
-                },
-                {
-                    "lang": "Other",
+                    "lang": "LaTeX",
                     "percent": 5,
-                    "color": "#AEAAFF",
+                    "color": "#AACDFF80",
+                    "hovered": false
+                },
+                {
+                    "lang": "Python (Pygame, numpy, pandas)",
+                    "percent": 25,
+                    "color": "#FEBAFF80",
+                    "hovered": false
+                },
+                {
+                    "lang": "Javascript (jQuery, Express.js, Node.js)",
+                    "percent": 20,
+                    "color": "#9e6aff80",
+                    "hovered": false
+                },
+                {
+                    "lang": "Java",
+                    "percent": 20,
+                    "color": "#D2AAFF80",
+                    "hovered": false
+                },
+                {
+                    "lang": "C",
+                    "percent": 15,
+                    "color": "#AEAAFF80",
+                    "hovered": false
+                },
+                {
+                    "lang": "C++",
+                    "percent": 15,
+                    "color": "#FFB8DC80",
                     "hovered": false
                 }
             ]
@@ -149,60 +155,77 @@
             "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tristique risus at urna malesuada, in semper arcu rutrum. Ut nisl urna, viverra non iaculis bibendum, auctor nec urna. Praesent faucibus ullamcorper lorem a pulvinar. Proin sed neque pharetra, dignissim ipsum non, facilisis ipsum. Cras sit amet nulla placerat, aliquam lorem ac, tristique nibh. ",
             "duties": [
                 {
+                    "title": "Conducting Interviews",
+                    "time_slice": 80,
+                    "color": "#AACDFF80"
+                },
+                {
                     "title": "Misc",
                     "time_slice": 5,
-                    "color": "#AACDFF"
-                },
+                    "color": "#FEBAFF80"
+                },           
                 {
-                    "title": "Desktop Software",
-                    "time_slice": 60,
-                    "color": "#FEBAFF"
-                },
-                {
-                    "title": "Documentation",
-                    "time_slice": 10,
-                    "color": "#9e6aff"
-                },
-                {
-                    "title": "Embedded Software",
-                    "time_slice": 10,
-                    "color": "#D2AAFF"
-                },
-                {
-                    "title": "Engineering Troubleshooting",
+                    "title": "Tabulating Responses",
                     "time_slice": 15,
-                    "color": "#AEAAFF"
+                    "color": "#9e6aff80"
+                }             
+            ],
+            "technologies": [
+                {
+                    "lang": "N/A",
+                    "percent": 100,
+                    "color": "#AACDFF80",
+                    "hovered": false
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "start_date": "Sept 2016",
+            "end_date": "June 2018",
+            "company": "Carleton University",
+            "position": "Teaching Assistant",
+            "current": false,
+            "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tristique risus at urna malesuada, in semper arcu rutrum. Ut nisl urna, viverra non iaculis bibendum, auctor nec urna. Praesent faucibus ullamcorper lorem a pulvinar. Proin sed neque pharetra, dignissim ipsum non, facilisis ipsum. Cras sit amet nulla placerat, aliquam lorem ac, tristique nibh. ",
+            "duties": [
+                {
+                    "title": "Marking Assignments",
+                    "time_slice": 25,
+                    "color": "#AACDFF80"
+                },
+                {
+                    "title": "Holding Office Hours",
+                    "time_slice": 35,
+                    "color": "#FEBAFF80"
+                },
+                {
+                    "title": "Hosting Tutorial Sessions",
+                    "time_slice": 30,
+                    "color": "#9e6aff80"
+                },
+                {
+                    "title": "Proctoring Exams",
+                    "time_slice": 10,
+                    "color": "#AEAAFF80"
                 }                
             ],
             "technologies": [
                 {
-                    "lang": "R",
-                    "percent": 10,
-                    "color": "#AACDFF",
+                    "lang": "LaTeX",
+                    "percent": 15,
+                    "color": "#AACDFF80",
                     "hovered": false
                 },
                 {
-                    "lang": "C# .NET Framework (Win Forms)",
+                    "lang": "Python (Pygame, numpy)",
+                    "percent": 50,
+                    "color": "#FEBAFF80",
+                    "hovered": false
+                },
+                {
+                    "lang": "Java",
                     "percent": 35,
-                    "color": "#FEBAFF",
-                    "hovered": false
-                },
-                {
-                    "lang": "C# .NET Framework (WPF)",
-                    "percent": 30,
-                    "color": "#9e6aff",
-                    "hovered": false
-                },
-                {
-                    "lang": "T-SQL (MSSQL)",
-                    "percent": 20,
-                    "color": "#D2AAFF",
-                    "hovered": false
-                },
-                {
-                    "lang": "Other",
-                    "percent": 5,
-                    "color": "#AEAAFF",
+                    "color": "#D2AAFF80",
                     "hovered": false
                 }
             ]
