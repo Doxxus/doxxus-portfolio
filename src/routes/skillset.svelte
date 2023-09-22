@@ -72,11 +72,11 @@
         transition: opacity 0.2s ease;
         transition-delay: 0s;
         opacity: 0;
-    }
 
-    .lang_info_container.show {
-        opacity: 1;
-        transition-delay: 0.7s;
+        &.show {
+            opacity: 1;
+            transition-delay: 0.7s;
+        }
     }
 
     .lang_logo {
@@ -122,11 +122,22 @@
         animation-delay: var(--anim_delay);
         opacity: 0.7;
         z-index: 5;
-    }
 
-    .lang_prof.show {
-        width: var(--width);
-        transition-delay: var(--delay);
+        &.show {
+            width: var(--width);
+            transition-delay: var(--delay);
+        }
+
+        &.expand {
+            position: absolute;
+            top: 50px;
+            height: 450px;
+            width: 90% !important;
+            left: 5%;
+            border-radius: 20px 20px 20px 20px;
+            z-index: 10;
+            opacity: 1;
+        }
     }
 
     .lang_name {
@@ -145,27 +156,16 @@
         transition: opacity 0.2s ease;
         transition: 0.7s ease-in-out;
         z-index: 10;
-    }
-    
-    .lang_name.show {
-        opacity: 1;
-        transition-delay: var(--delay);
-    }
 
-    .lang_prof.expand {
-        position: absolute;
-        top: 50px;
-        height: 450px;
-        width: 90% !important;
-        left: 5%;
-        border-radius: 20px 20px 20px 20px;
-        z-index: 10;
-        opacity: 1;
-    }
+        &.show {
+            opacity: 1;
+            transition-delay: var(--delay);
+        }
 
-    .lang_name.expand {
-        right: 45%;
-        font-size: 2em;
+        &.expand {
+            right: 45%;
+            font-size: 2em;
+        }
     }
 
     .lang_about {

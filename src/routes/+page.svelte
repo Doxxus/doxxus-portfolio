@@ -118,9 +118,6 @@
 </script>
 
 <main class="main_page_container"> 
-    <!-- <div class="bg"></div>
-    <div class="bg bg2"></div>
-    <div class="bg bg3"></div> -->
     <div class="background">
         <canvas id="stars" bind:this={Elements.starCanvas} width="300" height="300"></canvas>
     </div>

@@ -13,46 +13,61 @@
             "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tristique risus at urna malesuada, in semper arcu rutrum. Ut nisl urna, viverra non iaculis bibendum, auctor nec urna. Praesent faucibus ullamcorper lorem a pulvinar. Proin sed neque pharetra, dignissim ipsum non, facilisis ipsum. Cras sit amet nulla placerat, aliquam lorem ac, tristique nibh. ",
             "duties": [
                 {
+                    "title": "Misc",
+                    "time_slice": 5,
+                    "color": "#AACDFF"
+                },
+                {
                     "title": "Desktop Software",
-                    "time_slice": 60
+                    "time_slice": 60,
+                    "color": "#FEBAFF"
                 },
                 {
                     "title": "Documentation",
-                    "time_slice": 10
+                    "time_slice": 10,
+                    "color": "#9e6aff"
                 },
                 {
                     "title": "Embedded Software",
-                    "time_slice": 10
+                    "time_slice": 10,
+                    "color": "#D2AAFF"
                 },
                 {
                     "title": "Engineering Troubleshooting",
-                    "time_slice": 15
-                },
-                {
-                    "title": "Misc",
-                    "time_slice": 5
-                }
+                    "time_slice": 15,
+                    "color": "#AEAAFF"
+                }                
             ],
             "technologies": [
                 {
+                    "lang": "R",
+                    "percent": 10,
+                    "color": "#AACDFF",
+                    "hovered": false
+                },
+                {
                     "lang": "C# .NET Framework (Win Forms)",
-                    "percent": 30
+                    "percent": 35,
+                    "color": "#FEBAFF",
+                    "hovered": false
                 },
                 {
                     "lang": "C# .NET Framework (WPF)",
-                    "percent": 25
+                    "percent": 30,
+                    "color": "#9e6aff",
+                    "hovered": false
                 },
                 {
                     "lang": "T-SQL (MSSQL)",
-                    "percent": 20
-                },
-                {
-                    "lang": "R",
-                    "percent": 10
+                    "percent": 20,
+                    "color": "#D2AAFF",
+                    "hovered": false
                 },
                 {
                     "lang": "Other",
-                    "percent": 5
+                    "percent": 5,
+                    "color": "#AEAAFF",
+                    "hovered": false
                 }
             ]
         },
@@ -66,46 +81,61 @@
             "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tristique risus at urna malesuada, in semper arcu rutrum. Ut nisl urna, viverra non iaculis bibendum, auctor nec urna. Praesent faucibus ullamcorper lorem a pulvinar. Proin sed neque pharetra, dignissim ipsum non, facilisis ipsum. Cras sit amet nulla placerat, aliquam lorem ac, tristique nibh. ",
             "duties": [
                 {
+                    "title": "Misc",
+                    "time_slice": 5,
+                    "color": "#AACDFF"
+                },
+                {
                     "title": "Desktop Software",
-                    "time_slice": 60
+                    "time_slice": 60,
+                    "color": "#FEBAFF"
                 },
                 {
                     "title": "Documentation",
-                    "time_slice": 10
+                    "time_slice": 10,
+                    "color": "#9e6aff"
                 },
                 {
                     "title": "Embedded Software",
-                    "time_slice": 10
+                    "time_slice": 10,
+                    "color": "#D2AAFF"
                 },
                 {
                     "title": "Engineering Troubleshooting",
-                    "time_slice": 15
-                },
-                {
-                    "title": "Misc",
-                    "time_slice": 5
-                }
+                    "time_slice": 15,
+                    "color": "#AEAAFF"
+                }                
             ],
             "technologies": [
                 {
+                    "lang": "R",
+                    "percent": 10,
+                    "color": "#AACDFF",
+                    "hovered": false
+                },
+                {
                     "lang": "C# .NET Framework (Win Forms)",
-                    "percent": 30
+                    "percent": 35,
+                    "color": "#FEBAFF",
+                    "hovered": false
                 },
                 {
                     "lang": "C# .NET Framework (WPF)",
-                    "percent": 25
+                    "percent": 30,
+                    "color": "#9e6aff",
+                    "hovered": false
                 },
                 {
                     "lang": "T-SQL (MSSQL)",
-                    "percent": 20
-                },
-                {
-                    "lang": "R",
-                    "percent": 10
+                    "percent": 20,
+                    "color": "#D2AAFF",
+                    "hovered": false
                 },
                 {
                     "lang": "Other",
-                    "percent": 5
+                    "percent": 5,
+                    "color": "#AEAAFF",
+                    "hovered": false
                 }
             ]
         },
@@ -119,46 +149,61 @@
             "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tristique risus at urna malesuada, in semper arcu rutrum. Ut nisl urna, viverra non iaculis bibendum, auctor nec urna. Praesent faucibus ullamcorper lorem a pulvinar. Proin sed neque pharetra, dignissim ipsum non, facilisis ipsum. Cras sit amet nulla placerat, aliquam lorem ac, tristique nibh. ",
             "duties": [
                 {
+                    "title": "Misc",
+                    "time_slice": 5,
+                    "color": "#AACDFF"
+                },
+                {
                     "title": "Desktop Software",
-                    "time_slice": 60
+                    "time_slice": 60,
+                    "color": "#FEBAFF"
                 },
                 {
                     "title": "Documentation",
-                    "time_slice": 10
+                    "time_slice": 10,
+                    "color": "#9e6aff"
                 },
                 {
                     "title": "Embedded Software",
-                    "time_slice": 10
+                    "time_slice": 10,
+                    "color": "#D2AAFF"
                 },
                 {
                     "title": "Engineering Troubleshooting",
-                    "time_slice": 15
-                },
-                {
-                    "title": "Misc",
-                    "time_slice": 5
-                }
+                    "time_slice": 15,
+                    "color": "#AEAAFF"
+                }                
             ],
             "technologies": [
                 {
+                    "lang": "R",
+                    "percent": 10,
+                    "color": "#AACDFF",
+                    "hovered": false
+                },
+                {
                     "lang": "C# .NET Framework (Win Forms)",
-                    "percent": 30
+                    "percent": 35,
+                    "color": "#FEBAFF",
+                    "hovered": false
                 },
                 {
                     "lang": "C# .NET Framework (WPF)",
-                    "percent": 25
+                    "percent": 30,
+                    "color": "#9e6aff",
+                    "hovered": false
                 },
                 {
                     "lang": "T-SQL (MSSQL)",
-                    "percent": 20
-                },
-                {
-                    "lang": "R",
-                    "percent": 10
+                    "percent": 20,
+                    "color": "#D2AAFF",
+                    "hovered": false
                 },
                 {
                     "lang": "Other",
-                    "percent": 5
+                    "percent": 5,
+                    "color": "#AEAAFF",
+                    "hovered": false
                 }
             ]
         }

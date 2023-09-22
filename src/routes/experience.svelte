@@ -1,14 +1,19 @@
 <script lang="ts">
     export let experiences: Array<experience>;
+    import Chart from "chart.js/auto";
+    import { onMount } from "svelte";
 
     interface duties {
         title: string,
-        time_slice: number
+        time_slice: number,
+        color: string
     }
 
     interface technologies {
         lang: string,
         percent: number;
+        color: string;
+        hovered: boolean;
     }
 
     interface experience {
@@ -28,6 +33,8 @@
     let expand_line: boolean = false;
     let show_dot: boolean = false;
     let show_dots: Array<boolean> = [];
+
+    let duties_canvases: Array<HTMLCanvasElement> = [];
     
     for (let i = 0; i < experiences.length; i++) {
         show_dots[i] = false;
@@ -61,6 +68,67 @@
         }
     }
 
+    onMount(() => {
+        experiences.forEach((experience: experience) => {
+            new Chart(duties_canvases[experience.id], {
+                type: 'doughnut',
+                data: {
+                    labels: experience.duties.map(duty => duty.title),
+                    datasets: [
+                        {
+                            label: 'Time Percentage',
+                            data: experience.duties.map(duty => duty.time_slice),
+                            backgroundColor: experience.duties.map(duty => duty.color)
+                        }
+                    ],
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        title: {
+                            display: true,
+                            text: 'Responsibilities'
+                        }
+                    },
+                }
+            })
+        });
+    });
+
+    const hoverTech = (event: MouseEvent, technology: technologies) => {       
+        let div: HTMLDivElement = event.target as HTMLDivElement;
+        if (div === null) return;
+
+        let outer_div: HTMLElement | null = div.parentElement;
+        if (outer_div === null) return;
+
+        outer_div.childNodes.forEach((child: ChildNode) => {
+            let inner_div: HTMLDivElement = child as HTMLDivElement;
+            inner_div.style.width = (20 / experiences.length - 1).toString() + "%";
+        });
+
+        technology.hovered = true;
+        div.style.width = "80%";
+    }
+
+    const unhoverTech = (event: MouseEvent, experience: experience, technology: technologies) => {
+        let div: HTMLDivElement = event.target as HTMLDivElement;
+        if (div === null) return;
+
+        let outer_div: HTMLElement | null = div.parentElement;
+        if (outer_div === null) return;
+
+        for (let i = 0; i < outer_div.childNodes.length; i++) {
+            let inner_div: HTMLDivElement = outer_div.childNodes[i] as HTMLDivElement;
+            inner_div.style.width = experience.technologies[i].percent.toString() + "%";
+        }
+
+        technology.hovered = false;
+    }
+
 </script>
 
 <main style="padding: 0px 0px 10px 0px">
@@ -87,13 +155,24 @@
                 <div class="experience_container" class:show-me={show_dots[experience.id]}>
                     <div class="experience_info">
                         {#if experience.current}
-                            <h4>{experience.start_date} - Present</h4>
+                            <h4 style="margin-top: 50px;">{experience.start_date} - Present</h4>
                         {:else}
-                            <h4>{experience.start_date} - {experience.end_date}</h4>
+                            <h4 style="margin-top: 50px;">{experience.start_date} - {experience.end_date}</h4>
                         {/if}
                         <h2>{experience.position} at {experience.company}</h2>
                         <p>{experience.about}</p>
+                        <div class="technologies_wrapper">
+                            <h2 style="text-align: right; margin-right: 5px;">Technologies Used </h2>
+                            <div class="technologies_container">
+                                {#each experience.technologies as technology}
+                                    <div on:mouseenter={(event) => hoverTech(event, technology)} on:mouseleave={(event) => unhoverTech(event, experience, technology)} class="technology" style="width: {technology.percent}%; background-color: {technology.color}">
+                                        <p class="technology_name" class:show={technology.hovered}>{technology.lang}</p>
+                                    </div>
+                                {/each}
+                            </div>
+                        </div>
                     </div>
+                    <canvas class="duties_chart" bind:this={duties_canvases[experience.id]}></canvas>
                 </div>
             {/each}
         </div>
@@ -157,6 +236,46 @@
             @apply text-translucent-violet;
             font-size: 0.8em;
         }
+    }
+
+    .technologies_wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 10px;
+    }
+
+    .technologies_container {
+        flex-direction: row;
+        display: flex;
+        width: 90%;
+        height: 50px;
+        border-radius: 5px;
+        border-width: 1px;
+    }
+
+    .technology {
+        height: 100%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        transition: 0.2s ease-in-out;
+        opacity: 50%;
+    }
+
+    .technology_name {
+        opacity: 0%;
+        transition: 0.2s ease-in-out;
+
+        &.show {
+            opacity: 100%;
+        }
+    }
+
+    .duties_chart {
+        margin: 10px;
+        opacity: 50%;
     }
 
     .show-me:nth-child(n) {
