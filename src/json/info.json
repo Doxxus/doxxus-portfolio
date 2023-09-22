@@ -64,7 +64,7 @@
                     "hovered": false
                 },
                 {
-                    "lang": "Other (Python, Javascript, SAS JMP Script)",
+                    "lang": "Other (Python, Javascript, SAS JMP Script, LaTeX)",
                     "percent": 5,
                     "color": "#AEAAFF80",
                     "hovered": false
