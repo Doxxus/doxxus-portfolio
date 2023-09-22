@@ -10,6 +10,7 @@
     import About from './about.svelte';
     import Experience from './experience.svelte';
     import Skillset from './skillset.svelte';
+    import Projects from './projects.svelte';
     import Contact from './contact.svelte';
     
     import * as info from '../json/info.json'; 
@@ -159,6 +160,7 @@
             </div>
             <div id="Projects" class="info_base fade_in" class:expand={show_projects} style="--expand_height: 520px;" bind:this={Elements.eleProjects} on:click={() => {show_projects = ToggleExpand(show_projects)}} on:keydown={() => {show_projects = ToggleExpand(show_projects)}}>
                 <span class="sub_heading">Projects</span>
+                <Projects projects='{info.Projects}'></Projects>
             </div>
             <div id="Contact" class="info_base fade_in" class:expand={show_contact} style="--expand_height: 400px;" bind:this={Elements.eleContact} on:mouseenter={() => {init_contact = true}} on:mouseleave={() => {init_contact = false}} on:click={() => {show_contact = ToggleExpand(show_contact)}} on:keydown={() => {show_contact = ToggleExpand(show_contact)}}>
                 <span class="sub_heading">Contact</span>

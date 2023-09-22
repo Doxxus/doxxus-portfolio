@@ -251,7 +251,8 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        margin: 10px;
+        margin-top: 15px;
+        margin-right: 50px;
     }
 
     .technologies_container {
