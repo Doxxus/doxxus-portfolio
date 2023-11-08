@@ -625,49 +625,63 @@
             "id": 0,
             "title": "Kairo Mixes",
             "about": "A single page web app, for hosting my Drum and Bass mixes. I built this for two reasons: One is that I Soundcloud has an upload timelimit and Mixcloud trashes the quality, and it would be nice to have a website where I can listen to them anywhere. The other reason is that I wanted to get better using the SvelteKit web stack, so this helped me learn a lot about the technologies that I was quickly falling in love with. I believe I accomplished both my goals with this and I'm proud of the finished product.",
-            "github_link": "",
+            "icon": "../projects/kairo_mixes.png",
+            "dark_text": false,
+            "github_link": "https://github.com/Doxxus/KairoMixes",
             "technologies": []
         },
         {
             "id": 1,
             "title": "Doxxus Portfolio",
             "about": "You're looking at this project right now. I started it because I wanted to get better at full stack web development, and I wanted a cool portfolio website that I could send to prospective employers, it was a win-win.",
-            "github_link": "",
+            "icon": "../projects/doxxus.jpg",
+            "dark_text": false,
+            "github_link": "https://github.com/Doxxus/doxxus-portfolio",
             "technologies": []
         },
         {
             "id": 2,
             "title": "Centralized Analysis System",
             "about": "I was one of the lead developers, designing and implementing a centralized analysis system for use in the whole Abbott Point of Care organization. This tool spanned multiple technologies and architectures and allowed me to explore and implement: database design (Transact SQL), CRUD tool creation, server deployment, web service implementation (SOAP), and much more.",
+            "icon": "../projects/cen_at.png",
             "github_link": "",
+            "dark_text": false,
             "technologies": []
         },
         {
             "id": 3,
             "title": "Sailor Bot",
             "about": "A funny little Discord bot that posts memes in Discord servers to remind you of the joys of capitalism. It was a joke amongst my friends but I learnt a bit about TypeScript along the way.",
-            "github_link": "",
+            "icon": "../projects/sailor_bot.jpg",
+            "dark_text": true,
+            "github_link": "https://github.com/Doxxus/SailorBot",
             "technologies": []
         },
         {
             "id": 4,
             "title": "Dice Roller",
             "about": "A small little Python based GUI that rolls dice that I made in an afternoon for use in my Dungeons and Dragons campaigns.",
-            "github_link": "",
+            "icon": "../projects/dice_roller.png",
+            "dark_text": false,
+            "github_link": "https://github.com/Doxxus/dice_roller",
             "technologies": []
         },
         {
             "id": 5,
             "title": "Android Multi Dice Roller",
             "about": "Another dice rolling android app I made in Java because one of my friends was playing a necromancer in one of our Dungeons & Dragons campaigns and needed to roll a lot of dice for all of his summoned minions, so I whipped this app together in an evening. It isn't pretty, but it works.",
-            "github_link": "",
+            "icon": "../projects/android_dr.png",
+            "dark_text": false,
+            "github_link": "https://github.com/Doxxus/android_multi_dice_roller",
             "technologies": []
         },
         {
             "id": 6,
             "title": "Client - Server App",
             "about": "A small client-server proof of concept written in C# in Visual Studio 2019, I had been asked to develop as part of a take-home interview coding problem. I think it does a good job at demonstrating my ability to write DRY and SOLID codebases so I'm keeping it in here.",
-            "github_link": "",
+            "icon": "../projects/client_server_app.png",
+            "dark_text": false,
+            "github_link": "https://github.com/Doxxus/Client-Server-App",
             "technologies": []
         }
     ]
