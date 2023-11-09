@@ -10,7 +10,7 @@
             "company": "Abbott Point of Care",
             "position": "Associate Scientist",
             "current": true,
-            "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tristique risus at urna malesuada, in semper arcu rutrum. Ut nisl urna, viverra non iaculis bibendum, auctor nec urna. Praesent faucibus ullamcorper lorem a pulvinar. Proin sed neque pharetra, dignissim ipsum non, facilisis ipsum. Cras sit amet nulla placerat, aliquam lorem ac, tristique nibh. ",
+            "about": "I work on a small team of developers in research and development, writing code for production and internal R&D software. Working primarily using C#, WPF, and .NET, T-SQL, C++, and C.",
             "duties": [
                 {
                     "title": "Misc",
@@ -47,26 +47,32 @@
                 },
                 {
                     "lang": "C# .NET Framework (Win Forms)",
-                    "percent": 35,
+                    "percent": 30,
                     "color": "#FEBAFF80",
                     "hovered": false
                 },
                 {
                     "lang": "C# .NET Framework (WPF)",
-                    "percent": 30,
+                    "percent": 25,
                     "color": "#9e6aff80",
+                    "hovered": false
+                },
+                {
+                    "lang": "Embedded C/C++",
+                    "percent": 10,
+                    "color": "#D2AAFF80",
                     "hovered": false
                 },
                 {
                     "lang": "T-SQL (MSSQL)",
                     "percent": 20,
-                    "color": "#D2AAFF80",
+                    "color": "#AEAAFF80",
                     "hovered": false
                 },
                 {
                     "lang": "Other (Python, Javascript, SAS JMP Script, LaTeX)",
                     "percent": 5,
-                    "color": "#AEAAFF80",
+                    "color": "#FFB8DC80",
                     "hovered": false
                 }
             ]
@@ -78,7 +84,7 @@
             "company": "Carleton University",
             "position": "Teaching Assistant",
             "current": false,
-            "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tristique risus at urna malesuada, in semper arcu rutrum. Ut nisl urna, viverra non iaculis bibendum, auctor nec urna. Praesent faucibus ullamcorper lorem a pulvinar. Proin sed neque pharetra, dignissim ipsum non, facilisis ipsum. Cras sit amet nulla placerat, aliquam lorem ac, tristique nibh. ",
+            "about": "I was a contractor for COMP 2406 (Web Development). and COMP 2501 (Game Design & Development).",
             "duties": [
                 {
                     "title": "Marking Assignments",
@@ -152,7 +158,7 @@
             "company": "Elemental Data Collection",
             "position": "Market Research Interviewer",
             "current": false,
-            "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tristique risus at urna malesuada, in semper arcu rutrum. Ut nisl urna, viverra non iaculis bibendum, auctor nec urna. Praesent faucibus ullamcorper lorem a pulvinar. Proin sed neque pharetra, dignissim ipsum non, facilisis ipsum. Cras sit amet nulla placerat, aliquam lorem ac, tristique nibh. ",
+            "about": "I worked in of a team of Market Research Interviewers. I conducted regular interviews in the US and Canada on a variety of topics.",
             "duties": [
                 {
                     "title": "Conducting Interviews",
@@ -186,7 +192,7 @@
             "company": "Carleton University",
             "position": "Teaching Assistant",
             "current": false,
-            "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tristique risus at urna malesuada, in semper arcu rutrum. Ut nisl urna, viverra non iaculis bibendum, auctor nec urna. Praesent faucibus ullamcorper lorem a pulvinar. Proin sed neque pharetra, dignissim ipsum non, facilisis ipsum. Cras sit amet nulla placerat, aliquam lorem ac, tristique nibh. ",
+            "about": "I was on contract for 6 consecutive semesters for COMP 1005/1405 (Intro to Computer Science) and COMP 2401 (Intro to Systems Programming).",
             "duties": [
                 {
                     "title": "Marking Assignments",
@@ -624,7 +630,8 @@
         {
             "id": 0,
             "title": "Kairo Mixes",
-            "about": "A single page web app, for hosting my Drum and Bass mixes. I built this for two reasons: One is that I Soundcloud has an upload timelimit and Mixcloud trashes the quality, and it would be nice to have a website where I can listen to them anywhere. The other reason is that I wanted to get better using the SvelteKit web stack, so this helped me learn a lot about the technologies that I was quickly falling in love with. I believe I accomplished both my goals with this and I'm proud of the finished product.",
+            "expand": false,
+            "about": "A single page web app, for hosting my Drum and Bass mixes. I built this for two reasons: One is that Soundcloud has an upload timelimit and Mixcloud trashes the quality, and it would be nice to have a website where I can listen to them anywhere. The other reason is that I wanted to get better using the SvelteKit web stack, so this helped me learn a lot about the technologies that I was quickly falling in love with. I believe I accomplished both my goals with this and I'm proud of the finished product.",
             "icon": "../projects/kairo_mixes.png",
             "dark_text": false,
             "github_link": "https://github.com/Doxxus/KairoMixes",
@@ -633,6 +640,7 @@
         {
             "id": 1,
             "title": "Doxxus Portfolio",
+            "expand": false,
             "about": "You're looking at this project right now. I started it because I wanted to get better at full stack web development, and I wanted a cool portfolio website that I could send to prospective employers, it was a win-win.",
             "icon": "../projects/doxxus.jpg",
             "dark_text": false,
@@ -642,6 +650,7 @@
         {
             "id": 2,
             "title": "Centralized Analysis System",
+            "expand": false,
             "about": "I was one of the lead developers, designing and implementing a centralized analysis system for use in the whole Abbott Point of Care organization. This tool spanned multiple technologies and architectures and allowed me to explore and implement: database design (Transact SQL), CRUD tool creation, server deployment, web service implementation (SOAP), and much more.",
             "icon": "../projects/cen_at.png",
             "github_link": "",
@@ -651,6 +660,7 @@
         {
             "id": 3,
             "title": "Sailor Bot",
+            "expand": false,
             "about": "A funny little Discord bot that posts memes in Discord servers to remind you of the joys of capitalism. It was a joke amongst my friends but I learnt a bit about TypeScript along the way.",
             "icon": "../projects/sailor_bot.jpg",
             "dark_text": true,
@@ -660,6 +670,7 @@
         {
             "id": 4,
             "title": "Dice Roller",
+            "expand": false,
             "about": "A small little Python based GUI that rolls dice that I made in an afternoon for use in my Dungeons and Dragons campaigns.",
             "icon": "../projects/dice_roller.png",
             "dark_text": false,
@@ -669,6 +680,7 @@
         {
             "id": 5,
             "title": "Android Multi Dice Roller",
+            "expand": false,
             "about": "Another dice rolling android app I made in Java because one of my friends was playing a necromancer in one of our Dungeons & Dragons campaigns and needed to roll a lot of dice for all of his summoned minions, so I whipped this app together in an evening. It isn't pretty, but it works.",
             "icon": "../projects/android_dr.png",
             "dark_text": false,
@@ -678,6 +690,7 @@
         {
             "id": 6,
             "title": "Client - Server App",
+            "expand": false,
             "about": "A small client-server proof of concept written in C# in Visual Studio 2019, I had been asked to develop as part of a take-home interview coding problem. I think it does a good job at demonstrating my ability to write DRY and SOLID codebases so I'm keeping it in here.",
             "icon": "../projects/client_server_app.png",
             "dark_text": false,

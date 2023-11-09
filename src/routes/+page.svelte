@@ -158,7 +158,7 @@
                 <span class="sub_heading">Skills</span>
                 <Skillset languages='{info.languages}' show_skillset='{show_skillset}' init_skillset='{init_skillset}'></Skillset>
             </div>
-            <div id="Projects" class="info_base fade_in" class:expand={show_projects} style="--expand_height: {((Math.ceil(info.Projects.length / 3) + 1) * 150) + 80}px" bind:this={Elements.eleProjects} on:click={() => {show_projects = ToggleExpand(show_projects)}} on:keydown={() => {show_projects = ToggleExpand(show_projects)}}>
+            <div id="Projects" class="info_base fade_in" class:expand={show_projects} style="--expand_height: {((Math.ceil(info.Projects.length / 3) + 1) * 200) + 80}px" bind:this={Elements.eleProjects} on:click={() => {show_projects = ToggleExpand(show_projects)}} on:keydown={() => {show_projects = ToggleExpand(show_projects)}}>
                 <span class="sub_heading">Projects</span>
                 <Projects projects='{info.Projects}'></Projects>
             </div>

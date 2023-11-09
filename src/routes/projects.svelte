@@ -4,6 +4,7 @@
     interface Project {
         id: number,
         title: string,
+        expand: boolean,
         about: string,
         icon: string,
         dark_text: boolean,
@@ -23,46 +24,54 @@
 </script>
 
 <main>
+    <span class="tooltip">Click on a project to visit its Github page (if it's available).</span>
     <div class="outer_container">
         {#each projects as project}
-            <button class="project_container" on:click={() => {OpenGithub(project.github_link)}}>
-                {#if project.title.length > 12}
-                    <h2 class:light={!project.dark_text} class:dark={project.dark_text} class="twolinetext">{project.title}</h2>
+            <button class:expand={project.expand} class="project_container" on:mouseenter={() => {project.expand = true}} on:mouseleave={() => {project.expand = false}} on:click|stopPropagation={() => {OpenGithub(project.github_link)}}
+                style="--top: {Math.floor(project.id / 3) * 250 + 70}px; --left: {project.id % 3 * 39 + 5}%">
+                {#if project.title.length > 20}
+                    <h2 class:light={!project.dark_text} class:dark={project.dark_text} class:expand={project.expand} class="twolinetext">{project.title}</h2>
                 {:else}
-                    <h2 class:light={!project.dark_text} class:dark={project.dark_text} class="onelinetext">{project.title}</h2>
+                    <h2 class:light={!project.dark_text} class:dark={project.dark_text} class:expand={project.expand} class="onelinetext">{project.title}</h2>
                 {/if}     
-                <img class="project_icon" src={project.icon} alt="">    
+                <img class="project_icon" src={project.icon} alt="">
+                <div class="info_container">
+                    <p class="project_description">{project.about}</p>
+                </div>
             </button>
         {/each}
     </div>
 </main>
 
 <style lang="scss">
+    .tooltip {
+        @apply dark:text-translucent-violet text-muddy-violet;
+    }
+
     .outer_container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(auto-fit, 1fr);
-        padding: 8px;
-        margin: 20px;
-        gap: 0.5em;
-        place-items: center;
+        width: 100%;
+    }
+
+    .project_container.expand {
+        height: 200px;
+        width: 90%;
+        left: 5%;
+        z-index: 25;
     }
 
     .project_container {
-        width: 150px;
-        height: 150px;
-        position: relative;
+        top: var(--top);
+        left: var(--left);
+        width: 200px;
+        height: 200px;
+        position: absolute;
         transition: 0.3s;
-        max-width: 500px;
-        margin-top: 20px;
-        margin-bottom: 20px;
         border-radius: 50px;
         @apply bg-violet-400;
         box-shadow: 6px 6px rgb(26, 19, 46);
-
-        :hover {
-            box-shadow: 0px 0px rgb(26, 19, 46);
-        }
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
 
         h2 {
             position: absolute;
@@ -80,10 +89,20 @@
 
         .twolinetext {
             top: 33%;
+            transition: all 0.2s;
+        }
+
+        .twolinetext.expand {
+            top: 5%;       
         }
 
         .onelinetext {
             top: 41%;
+            transition: all 0.2s;
+        }
+
+        .onelinetext.expand {
+            top: 5%;
         }
 
         .light {
@@ -92,20 +111,32 @@
 
         .dark {
             @apply text-muddy-violet;
-        }       
-    }
-
-    .project_icon {
-        size: 100%;
-        overflow: hidden;
-        position: relative;
-        z-index: 0;
-        border-radius: 50px;
-
+        }
         
-        mix-blend-mode: luminosity;
-        -webkit-filter: grayscale(100%);
-        filter: grayscale(100%);
-        opacity: 1;
+        .project_icon {
+            height: 200px;
+            width: 200px;
+            overflow: hidden;
+            position: absolute;
+            z-index: 0;
+            border-radius: 50px;
+            
+            mix-blend-mode: luminosity;
+            -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+            opacity: 1;
+        }
+
+        .info_container {
+            position: absolute;
+            height: 200px;
+            width: 500px;
+            font-size: 0.8em;
+            text-align: left;
+            top: 25%;
+            left: 205px;
+            opacity: 1;
+        }
     }
+  
 </style>

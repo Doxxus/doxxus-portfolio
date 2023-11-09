@@ -229,6 +229,7 @@
         display: flex;
         z-index: 1;
         background-color: transparent;
+        width: calc(100% - 200px);
     
         h2 {
             @apply text-translucent-violet;
