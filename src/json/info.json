@@ -659,6 +659,16 @@
         },
         {
             "id": 3,
+            "title": "Encounter Tracker",
+            "expand": false,
+            "about": "A small single page web app I developed with the intention of making it easier to run enouncters in my Dungeons and Dragons campaign when there are many NPCs to keep track of.",
+            "icon": "../projects/encounter_tracker.png",
+            "dark_text": false,
+            "github_link": "https://github.com/Doxxus/EncounterTracker",
+            "technologies": []
+        },
+        {
+            "id": 4,
             "title": "Sailor Bot",
             "expand": false,
             "about": "A funny little Discord bot that posts memes in Discord servers to remind you of the joys of capitalism. It was a joke amongst my friends but I learnt a bit about TypeScript along the way.",
@@ -668,7 +678,7 @@
             "technologies": []
         },
         {
-            "id": 4,
+            "id": 5,
             "title": "Dice Roller",
             "expand": false,
             "about": "A small little Python based GUI that rolls dice that I made in an afternoon for use in my Dungeons and Dragons campaigns.",
@@ -678,7 +688,7 @@
             "technologies": []
         },
         {
-            "id": 5,
+            "id": 6,
             "title": "Android Multi Dice Roller",
             "expand": false,
             "about": "Another dice rolling android app I made in Java because one of my friends was playing a necromancer in one of our Dungeons & Dragons campaigns and needed to roll a lot of dice for all of his summoned minions, so I whipped this app together in an evening. It isn't pretty, but it works.",
@@ -688,7 +698,7 @@
             "technologies": []
         },
         {
-            "id": 6,
+            "id": 7,
             "title": "Client - Server App",
             "expand": false,
             "about": "A small client-server proof of concept written in C# in Visual Studio 2019, I had been asked to develop as part of a take-home interview coding problem. I think it does a good job at demonstrating my ability to write DRY and SOLID codebases so I'm keeping it in here.",
