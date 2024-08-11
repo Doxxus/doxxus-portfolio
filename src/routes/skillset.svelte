@@ -1,4 +1,7 @@
 <script lang="ts">
+    import Tootlip from './tooltip.svelte';
+    import { tooltip } from '../scripts/tootltip'
+
     export let languages: Array<language>;
     export let show_skillset: boolean;
     export let init_skillset: boolean;
@@ -8,7 +11,8 @@
         name: string,
         expand: boolean,
         image_path: string,
-        about: string
+        about: string,
+        url: string
     }
     
     interface language {
@@ -52,7 +56,8 @@
                         <div class="frameworks_container">
                             {#each lang.frameworks as fw}
                                 <div class="framework" style="--padding: {Math.max(18 - (lang.frameworks.length) * 2, 2)}%;">
-                                    <img src='{fw.image_path}' alt=''/>
+                                    <!-- svelte-ignore a11y-click-events-have-key-events -->
+                                    <img src='{fw.image_path}' alt='' title="{fw.name}" use:tooltip on:click={() => {window.open(fw.url)}}/>
                                 </div>
                             {/each}
                         </div>

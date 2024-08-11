@@ -8,7 +8,7 @@
     let submit_button: HTMLButtonElement;
     
     function SendEmail() {
-        alert("This funciton is unavailable at the moment, please send an email to lachlan@doxxus.ca instead. Apppologies for the inconvenience.");
+        alert("This function is unavailable right now, please send an email to lachlan@doxxus.ca instead. Apologies for the inconvenience.");
     }
 </script>
 

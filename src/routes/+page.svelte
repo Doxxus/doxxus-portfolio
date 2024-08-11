@@ -12,6 +12,8 @@
     import Skillset from './skillset.svelte';
     import Projects from './projects.svelte';
     import Contact from './contact.svelte';
+    import Tootlip from './tooltip.svelte';
+    import { tooltip } from '../scripts/tootltip'
     
     import * as info from '../json/info.json'; 
 
@@ -168,17 +170,17 @@
             </div>
             <div class="links_container" class:show={show_links}>
                 <div class="link_container">
-                    <button on:click={() => {window.open("https://github.com/doxxus")}}>
+                    <button on:click={() => {window.open("https://github.com/doxxus")}} title="Click this to go to my github." use:tooltip>
                         <img class="link_image" src='./links/github.png' alt='' />
                     </button>
                 </div>
                 <div class="link_container">
-                    <button on:click={() => {window.open("https://www.linkedin.com/in/lachlan-campbell-doxxus/")}}>
+                    <button on:click={() => {window.open("https://www.linkedin.com/in/lachlan-campbell-doxxus/")}} title="Click this to go to my linkedin page." use:tooltip>
                         <img class="link_image" src='./links/linkedin.png' alt='' />
                     </button>
                 </div>
                 <div class="link_container">
-                    <button on:click={() => {window.open("./resume_no_reference.pdf")}}>
+                    <button on:click={() => {window.open("./campbell_resume_2024_no_ref.pdf")}} title="Click this to see my resume." use:tooltip>
                         <img class="link_image" src='./links/resume.png' alt='' />
                     </button>
                 </div>
