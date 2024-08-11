@@ -5,7 +5,7 @@ Made this project to learn more about the SvelteKit web stack and to make a cool
 # https://folio.doxxus.ca
 
 
-### Some things I plant to work on in the future:
+### Some things I plan to work on in the future:
 
 - Adding background settings including a 'performance mode' that disables background animations
 - Fixing mobile compatibility
